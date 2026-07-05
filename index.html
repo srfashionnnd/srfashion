@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SR Fashion Nanded — Stock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">SR <span>FASHION NANDED</span></div>
+  <div class="topbar-right">
+    <div class="count-pill" id="totalCountPill">0 items</div>
+    <button class="icon-btn" id="refreshBtn" title="Refresh stock">⟳</button>
+    <button class="admin-btn" id="adminBtn">⚡ Admin</button>
+  </div>
+</header>
+
+<div class="toolbar">
+
+  <div class="search-row">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Name, alias, barcode..." autocomplete="off" />
+    </div>
+    <button class="scan-btn" id="scanBtn" title="Scan barcode">▣</button>
+  </div>
+
+  <div class="pill-row" id="sortPills">
+    <button class="pill active" data-sort="default">Default</button>
+    <button class="pill" data-sort="group">By Group</button>
+    <button class="pill" data-sort="az">A – Z</button>
+    <button class="pill" data-sort="priceAsc">Price ↑</button>
+    <button class="pill" data-sort="priceDesc">Price ↓</button>
+  </div>
+
+  <div class="pill-row" id="stockPills">
+    <button class="pill status-pill active" data-stock="all">🏷 All Stock</button>
+    <button class="pill status-pill in" data-stock="in">✅ In Stock</button>
+    <button class="pill status-pill low" data-stock="low">⚠ Low Stock (≤5)</button>
+    <button class="pill status-pill out" data-stock="out">✕ Out of Stock</button>
+  </div>
+
+  <div class="dropdown-row">
+    <div class="dropdown" id="brandDropdown">
+      <button class="dropdown-toggle" data-target="brandMenu">🏷 <span id="brandLabel">All Brands</span> <span class="chev">▾</span></button>
+      <div class="dropdown-menu" id="brandMenu"></div>
+    </div>
+    <div class="dropdown" id="groupDropdown">
+      <button class="dropdown-toggle" data-target="groupMenu">📁 <span id="groupLabel">All Groups</span> <span class="chev">▾</span></button>
+      <div class="dropdown-menu" id="groupMenu"></div>
+    </div>
+  </div>
+
+  <div class="price-row">
+    <span class="price-label">₹ Sale:</span>
+    <input type="number" id="minPrice" placeholder="Min" />
+    <span class="dash">–</span>
+    <input type="number" id="maxPrice" placeholder="Max" />
+    <button class="go-btn" id="goBtn">Go</button>
+    <button class="clear-btn" id="clearPriceBtn" title="Clear">✕</button>
+  </div>
+
+  <div class="result-count" id="resultCount"></div>
+</div>
+
+<main id="productGrid"></main>
+
+<div class="hero" id="emptyState">
+  <div class="hero-logo">SR</div>
+  <div class="hero-sub">FASHION NANDED</div>
+  <div class="hero-line"></div>
+  <p>Search or scan a product above to find items instantly.</p>
+</div>
+
+<div class="modal-overlay" id="scanOverlay">
+  <div class="modal">
+    <button class="modal-close" id="scanClose">✕</button>
+    <h3>Scan Barcode</h3>
+    <video id="scanVideo" playsinline></video>
+    <p class="scan-hint" id="scanHint">Point camera at a barcode</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="loginOverlay">
+  <div class="modal small">
+    <button class="modal-close" id="loginClose">✕</button>
+    <h3>Admin Login</h3>
+    <input type="password" id="adminPassInput" placeholder="Enter admin password" />
+    <button class="go-btn full" id="adminSubmit">Login</button>
+    <p class="login-error" id="loginError"></p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
