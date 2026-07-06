@@ -4,8 +4,11 @@
     "driver": "ODBC Driver 17 for SQL Server",
 
     "repository_path": "C:\\Users\\ASUS\\Desktop\\srfashionndclaude",
-
     "branch": "main",
 
-    "sync_interval": 10
+    "sync_interval": 10,
+
+    "create_backup": true,
+
+    "generate_last_sync": true
 }
