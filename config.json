@@ -1,0 +1,11 @@
+{
+    "server": "DESKTOP-UA7PBVU",
+    "database": "BusyComp0004_db12026",
+    "driver": "ODBC Driver 17 for SQL Server",
+
+    "repository_path": "C:\\Users\\ASUS\\Desktop\\srfashionndclaude",
+
+    "branch": "main",
+
+    "sync_interval": 10
+}
