@@ -3,9 +3,8 @@
    -----------------------------------------------------------
    HOW THIS WORKS (read this once):
    1. This page reads product data from "items.json" sitting in
-      the same folder. Your Python watch script / GitHub Action
-      should keep overwriting that items.json file with the
-      latest Busy export.
+      the same folder. Your Python export script keeps updating
+      that file with the latest Busy export.
    2. items.json is an array of objects like:
       { "code":2035, "name":"Product Name", "mrp":819.2,
         "sale_price":740, "purchase_price":640, "stock":-3 }
@@ -17,8 +16,10 @@
    ========================================================= */
 
 const CONFIG = {
-  ADMIN_PASSWORD: "7277",       // <-- change this
+  ADMIN_PASSWORD: "7277",
   LOW_STOCK_MAX: 5,
+  DATA_URL: "items.json",
+  LAST_SYNC_URL: "last-sync.json",
 };
 
 let ALL_PRODUCTS = [];
@@ -32,39 +33,126 @@ let state = {
   maxPrice: null,
   isAdmin: false,
 };
+let isLoading = false;
 
-/* ---------------- DATA LOADING ---------------- */
+function buildProductFromItem(item) {
+  const name = (item?.name || "").toString().trim();
+  if (!name) {
+    return null;
+  }
 
-async function loadStock() {
+  return {
+    name,
+    code: (item?.code ?? "").toString().trim(),
+    alias: "",
+    category: "",
+    brand: "",
+    mrp: Number(item?.mrp ?? 0),
+    sale: Number(item?.sale_price ?? 0),
+    wholesale: null,
+    purchase: Number(item?.purchase_price ?? 0),
+    stock: Number(item?.stock ?? 0),
+  };
+}
+
+function normalizeProductData(data) {
+  if (!Array.isArray(data)) {
+    throw new Error("Expected items.json to contain an array of products.");
+  }
+
+  return data
+    .map((item) => buildProductFromItem(item))
+    .filter(Boolean);
+}
+
+function getCacheBustedUrl(url) {
+  const requestUrl = new URL(url, window.location.href);
+  requestUrl.searchParams.set("v", Date.now().toString());
+  return requestUrl.toString();
+}
+
+async function fetchJson(url) {
+  const response = await fetch(getCacheBustedUrl(url), {
+    cache: "no-store",
+    headers: { Accept: "application/json" },
+  });
+
+  if (!response.ok) {
+    throw new Error(`${url} could not be loaded.`);
+  }
+
+  return response.json();
+}
+
+function setGridMessage(message, isError = false) {
+  const grid = document.getElementById("productGrid");
+  if (!grid) return;
+  const color = isError ? "#ff5c6c" : "#8a8a90";
+  grid.innerHTML = `<p style="color:${color};padding:20px;">${escapeHtml(message)}</p>`;
+}
+
+function setRefreshButtonState(loading) {
+  const button = document.getElementById("refreshBtn");
+  if (!button) return;
+  button.disabled = loading;
+  button.classList.toggle("is-loading", loading);
+  button.setAttribute("aria-busy", loading ? "true" : "false");
+  button.title = loading ? "Refreshing stock..." : "Refresh stock";
+}
+
+function updateSyncStatus(text) {
+  const syncStatus = document.getElementById("syncStatus");
+  if (!syncStatus) return;
+  syncStatus.textContent = text || "Sync unavailable";
+  syncStatus.title = text || "Sync unavailable";
+}
+
+async function loadStock({ showLoading = false } = {}) {
+  if (isLoading) {
+    return;
+  }
+
+  isLoading = true;
+  setRefreshButtonState(true);
+
+  if (showLoading) {
+    setGridMessage("Refreshing stock...");
+  }
+
   try {
-    const response = await fetch("items.json?v=" + Date.now());
+    const [stockResult, syncResult] = await Promise.allSettled([
+      fetchJson(CONFIG.DATA_URL),
+      fetchJson(CONFIG.LAST_SYNC_URL).catch(() => null),
+    ]);
 
-    if (!response.ok) {
-      throw new Error("items.json not found");
+    if (stockResult.status !== "fulfilled") {
+      throw stockResult.reason || new Error("Unable to load stock data.");
     }
 
-    const data = await response.json();
+    ALL_PRODUCTS = normalizeProductData(stockResult.value);
 
-    ALL_PRODUCTS = data.map(item => ({
-      name: item.name || "",
-      code: item.code || "",
-      alias: "",
-      category: "",
-      brand: "",
-      mrp: Number(item.mrp || 0),
-      sale: Number(item.sale_price || 0),
-      wholesale: null,
-      purchase: Number(item.purchase_price || 0),
-      stock: Number(item.stock || 0)
-    }));
+    if (syncResult.status === "fulfilled" && syncResult.value?.last_updated) {
+      updateSyncStatus(`Updated ${syncResult.value.last_updated}`);
+    } else {
+      updateSyncStatus("Sync unavailable");
+    }
 
     populateDropdowns();
     renderAll();
-
+    console.info(`[stock] Loaded ${ALL_PRODUCTS.length} products from ${CONFIG.DATA_URL}`);
   } catch (err) {
-    console.error(err);
-    document.getElementById("productGrid").innerHTML =
-      `<p style="color:red;padding:20px;">Failed to load items.json</p>`;
+    console.error("[stock] Failed to load latest stock", err);
+    updateSyncStatus("Load failed");
+
+    if (!ALL_PRODUCTS.length) {
+      setGridMessage("Failed to load latest stock. Please refresh again in a moment.", true);
+    } else {
+      setGridMessage("Failed to load latest stock. Showing previously loaded values.", true);
+      renderAll();
+    }
+  } finally {
+    isLoading = false;
+    setRefreshButtonState(false);
   }
 }
 
@@ -132,12 +220,12 @@ function applyFilters() {
 
   if (state.search.trim()) {
     const q = state.search.trim().toLowerCase();
-    list = list.filter(
-      (p) =>
-        p.name.toLowerCase().includes(q) ||
-        p.alias.toLowerCase().includes(q) ||
-        p.code.toLowerCase().includes(q)
-    );
+    list = list.filter((p) => {
+      const name = (p.name || "").toString().toLowerCase();
+      const alias = (p.alias || "").toString().toLowerCase();
+      const code = (p.code || "").toString().toLowerCase();
+      return name.includes(q) || alias.includes(q) || code.includes(q);
+    });
   }
 
   if (state.stockFilter !== "all") {
@@ -172,7 +260,7 @@ function applyFilters() {
       list.sort((a, b) => (b.sale ?? -Infinity) - (a.sale ?? -Infinity));
       break;
     default:
-      break; // keep original order
+      break;
   }
 
   return list;
@@ -293,7 +381,7 @@ document.getElementById("clearPriceBtn").addEventListener("click", () => {
 });
 
 document.getElementById("refreshBtn").addEventListener("click", () => {
-  loadStock();
+  loadStock({ showLoading: true });
 });
 
 /* ---------------- ADMIN LOGIN ---------------- */
@@ -403,4 +491,10 @@ function stopScan() {
 
 /* ---------------- INIT ---------------- */
 
-loadStock();
+loadStock({ showLoading: true });
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && !isLoading) {
+    loadStock();
+  }
+});
