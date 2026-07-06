@@ -60,36 +60,47 @@ try:
     new_json = json.dumps(items, indent=4, ensure_ascii=False)
 
     old_json = ""
+    old_last_sync_json = ""
 
     if os.path.exists("items.json"):
         with open("items.json", "r", encoding="utf-8") as f:
             old_json = f.read()
 
+    if os.path.exists("last-sync.json"):
+        with open("last-sync.json", "r", encoding="utf-8") as f:
+            old_last_sync_json = f.read()
+
     new_hash = hashlib.md5(new_json.encode("utf-8")).hexdigest()
     old_hash = hashlib.md5(old_json.encode("utf-8")).hexdigest()
-
-    if new_hash == old_hash:
-        print("✅ No data changes detected.")
-        print("⏭ Nothing to update.")
-        conn.close()
-        sys.exit(10)
-
-    with open("items.json", "w", encoding="utf-8") as f:
-        f.write(new_json)
 
     last_sync = {
         "last_updated": datetime.now().strftime("%d %b %Y %I:%M:%S %p")
     }
+    new_last_sync_json = json.dumps(last_sync, indent=4)
 
     with open("last-sync.json", "w", encoding="utf-8") as f:
-        json.dump(last_sync, f, indent=4)
+        f.write(new_last_sync_json)
 
-    print("✅ Changes detected.")
-    print("✅ items.json updated.")
-    print("✅ last-sync.json updated.")
-    print(f"📦 Total Products: {len(items)}")
+    if new_hash != old_hash:
+        with open("items.json", "w", encoding="utf-8") as f:
+            f.write(new_json)
+        print("✅ Changes detected.")
+        print("✅ items.json updated.")
+        print("✅ last-sync.json refreshed.")
+        print(f"📦 Total Products: {len(items)}")
+        conn.close()
+        sys.exit(0)
 
+    if old_last_sync_json != new_last_sync_json:
+        print("✅ Sync metadata refreshed.")
+        print("✅ last-sync.json updated.")
+        conn.close()
+        sys.exit(0)
+
+    print("✅ No data changes detected.")
+    print("⏭ Nothing to update.")
     conn.close()
+    sys.exit(10)
 
 except Exception as e:
     print("\n❌ ERROR:")
