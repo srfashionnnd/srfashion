@@ -8,21 +8,33 @@ print("=" * 50)
 print("SR FASHION AUTO UPDATE")
 print("=" * 50)
 
-def run(script):
-    print(f"\n▶ Running {script}...")
+print("\n▶ Running export_items.py...")
 
-    result = subprocess.run(
-        [sys.executable, script],
-        cwd=PROJECT_DIR
-    )
+result = subprocess.run(
+    [sys.executable, "export_items.py"],
+    cwd=PROJECT_DIR
+)
 
-    if result.returncode != 0:
-        print(f"\n❌ {script} failed.")
-        sys.exit(result.returncode)
+# No changes
+if result.returncode == 10:
+    print("\n✅ No changes found.")
+    print("🚫 Git sync skipped.")
+    sys.exit(0)
 
-    print(f"✅ {script} completed.")
+# Error
+if result.returncode != 0:
+    print("\n❌ Export failed.")
+    sys.exit(result.returncode)
 
-run("export_items.py")
-run("git_sync.py")
+print("\n▶ Running git_sync.py...")
 
-print("\n🎉 ALL DONE!")
+result = subprocess.run(
+    [sys.executable, "git_sync.py"],
+    cwd=PROJECT_DIR
+)
+
+if result.returncode != 0:
+    print("\n❌ Git sync failed.")
+    sys.exit(result.returncode)
+
+print("\n🎉 WEBSITE UPDATED SUCCESSFULLY!")

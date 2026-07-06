@@ -1,6 +1,9 @@
 import pyodbc
 import json
 from datetime import datetime
+import hashlib
+import os
+import sys
 
 server = "DESKTOP-UA7PBVU"
 database = "BusyComp0004_db12026"
@@ -54,11 +57,26 @@ try:
             "stock": float(row.Stock or 0)
         })
 
-    # Save items.json
-    with open("items.json", "w", encoding="utf-8") as f:
-        json.dump(items, f, indent=4, ensure_ascii=False)
+    new_json = json.dumps(items, indent=4, ensure_ascii=False)
 
-    # Save last-sync.json
+    old_json = ""
+
+    if os.path.exists("items.json"):
+        with open("items.json", "r", encoding="utf-8") as f:
+            old_json = f.read()
+
+    new_hash = hashlib.md5(new_json.encode("utf-8")).hexdigest()
+    old_hash = hashlib.md5(old_json.encode("utf-8")).hexdigest()
+
+    if new_hash == old_hash:
+        print("✅ No data changes detected.")
+        print("⏭ Nothing to update.")
+        conn.close()
+        sys.exit(10)
+
+    with open("items.json", "w", encoding="utf-8") as f:
+        f.write(new_json)
+
     last_sync = {
         "last_updated": datetime.now().strftime("%d %b %Y %I:%M:%S %p")
     }
@@ -66,8 +84,9 @@ try:
     with open("last-sync.json", "w", encoding="utf-8") as f:
         json.dump(last_sync, f, indent=4)
 
-    print("✅ items.json created successfully!")
-    print("✅ last-sync.json updated!")
+    print("✅ Changes detected.")
+    print("✅ items.json updated.")
+    print("✅ last-sync.json updated.")
     print(f"📦 Total Products: {len(items)}")
 
     conn.close()
@@ -75,3 +94,4 @@ try:
 except Exception as e:
     print("\n❌ ERROR:")
     print(e)
+    sys.exit(1)
