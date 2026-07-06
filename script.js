@@ -2,14 +2,13 @@
    SR FASHION NANDED — Stock Site Script
    -----------------------------------------------------------
    HOW THIS WORKS (read this once):
-   1. This page reads product data from "Stock.csv" sitting in
+   1. This page reads product data from "items.json" sitting in
       the same folder. Your Python watch script / GitHub Action
-      should keep overwriting that Stock.csv file with the
+      should keep overwriting that items.json file with the
       latest Busy export.
-   2. Column names below (HEADER_ALIASES) are flexible — if your
-      Busy CSV headers are named slightly differently, just add
-      the exact header text you see in your CSV into the right
-      list below. No need to touch anything else.
+   2. items.json is an array of objects like:
+      { "code":2035, "name":"Product Name", "mrp":819.2,
+        "sale_price":740, "purchase_price":640, "stock":-3 }
    3. Change ADMIN_PASSWORD to whatever password you want to use
       to unlock the Admin view (shows Purchase Price box).
       NOTE: this is a simple front-end lock, not real security —
@@ -18,35 +17,9 @@
    ========================================================= */
 
 const CONFIG = {
-  CSV_PATH: "Stock.csv",
   ADMIN_PASSWORD: "7277",       // <-- change this
   LOW_STOCK_MAX: 5,
 };
-
-// If your CSV has NO header row (just raw data rows), this tells the script
-// what each column position means, left to right. "code" is read but not
-// shown on the site (ignored, as asked).
-// Current real export order: Code, Name, MRP, Sale Price, Purchase Price, Stock
-// If you ever add Category/Brand/Wholesale columns, just add "category" /
-// "brand" / "wholesale" into this list at the correct position.
-const POSITIONAL_COLUMNS = ["code", "name", "mrp", "sale", "purchase", "stock"];
-
-// Used only if the CSV DOES have a header row (first line has text labels
-// like "MRP", "Stock" etc.) — the script auto-detects which mode to use.
-const HEADER_ALIASES = {
-  name:      ["item name", "product name", "name", "item"],
-  code:      ["item code", "code", "barcode", "item no", "item number"],
-  alias:     ["alias", "alt name", "short name"],
-  category:  ["category", "group", "item group", "group name"],
-  brand:     ["brand", "brand name"],
-  mrp:       ["mrp", "m.r.p.", "printed price"],
-  sale:      ["sale price", "sale rate", "selling price", "rate"],
-  wholesale: ["wholesale", "wholesale price", "wholesale rate"],
-  purchase:  ["purchase", "purchase price", "purchase rate", "cost price"],
-  stock:     ["stock", "stock qty", "quantity", "closing qty", "current stock"],
-};
-
-const HEADER_HINT_WORDS = ["mrp", "stock", "price", "rate", "item name", "product name", "category", "brand"];
 
 let ALL_PRODUCTS = [];
 let state = {
@@ -60,117 +33,39 @@ let state = {
   isAdmin: false,
 };
 
-/* ---------------- CSV LOADING ---------------- */
+/* ---------------- DATA LOADING ---------------- */
 
-function normalizeHeader(h) {
-  return (h || "").toString().trim().toLowerCase();
-}
+async function loadStock() {
+  try {
+    const response = await fetch("items.json?v=" + Date.now());
 
-function findKey(headerMap, aliasList) {
-  for (const alias of aliasList) {
-    if (headerMap[alias] !== undefined) return headerMap[alias];
+    if (!response.ok) {
+      throw new Error("items.json not found");
+    }
+
+    const data = await response.json();
+
+    ALL_PRODUCTS = data.map(item => ({
+      name: item.name || "",
+      code: item.code || "",
+      alias: "",
+      category: "",
+      brand: "",
+      mrp: Number(item.mrp || 0),
+      sale: Number(item.sale_price || 0),
+      wholesale: null,
+      purchase: Number(item.purchase_price || 0),
+      stock: Number(item.stock || 0)
+    }));
+
+    populateDropdowns();
+    renderAll();
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("productGrid").innerHTML =
+      `<p style="color:red;padding:20px;">Failed to load items.json</p>`;
   }
-  return null;
-}
-
-function loadStock() {
-  Papa.parse(CONFIG.CSV_PATH + "?t=" + Date.now(), {
-    download: true,
-    header: false,
-    skipEmptyLines: true,
-    complete: (results) => {
-      const rows = results.data;
-      if (!rows.length) {
-        ALL_PRODUCTS = [];
-        renderAll();
-        return;
-      }
-
-      const firstRowLower = rows[0].map((c) => (c || "").toString().trim().toLowerCase());
-      const looksLikeHeader = firstRowLower.some((c) => HEADER_HINT_WORDS.includes(c));
-
-      ALL_PRODUCTS = looksLikeHeader
-        ? parseWithHeader(rows)
-        : parsePositional(rows);
-
-      populateDropdowns();
-      renderAll();
-    },
-    error: (err) => {
-      document.getElementById("productGrid").innerHTML =
-        `<p style="color:#ff5c6c;padding:20px;">Could not load ${CONFIG.CSV_PATH} — make sure the file is in the same folder as index.html. (${err})</p>`;
-    },
-  });
-}
-
-function parseWithHeader(rows) {
-  const rawHeaders = rows[0];
-  const headerMap = {};
-  rawHeaders.forEach((h, i) => (headerMap[normalizeHeader(h)] = i));
-
-  const idx = {};
-  Object.keys(HEADER_ALIASES).forEach((field) => {
-    idx[field] = findKey(headerMap, HEADER_ALIASES[field]);
-  });
-
-  return rows
-    .slice(1)
-    .map((row) => buildProduct({
-      name: idx.name !== null ? row[idx.name] : "",
-      code: idx.code !== null ? row[idx.code] : "",
-      alias: idx.alias !== null ? row[idx.alias] : "",
-      category: idx.category !== null ? row[idx.category] : "",
-      brand: idx.brand !== null ? row[idx.brand] : "",
-      mrp: idx.mrp !== null ? row[idx.mrp] : null,
-      sale: idx.sale !== null ? row[idx.sale] : null,
-      wholesale: idx.wholesale !== null ? row[idx.wholesale] : null,
-      purchase: idx.purchase !== null ? row[idx.purchase] : null,
-      stock: idx.stock !== null ? row[idx.stock] : 0,
-    }))
-    .filter(Boolean);
-}
-
-function parsePositional(rows) {
-  const colIndex = {};
-  POSITIONAL_COLUMNS.forEach((field, i) => (colIndex[field] = i));
-
-  return rows
-    .map((row) => buildProduct({
-      name: colIndex.name !== undefined ? row[colIndex.name] : "",
-      code: colIndex.code !== undefined ? row[colIndex.code] : "",
-      alias: colIndex.alias !== undefined ? row[colIndex.alias] : "",
-      category: colIndex.category !== undefined ? row[colIndex.category] : "",
-      brand: colIndex.brand !== undefined ? row[colIndex.brand] : "",
-      mrp: colIndex.mrp !== undefined ? row[colIndex.mrp] : null,
-      sale: colIndex.sale !== undefined ? row[colIndex.sale] : null,
-      wholesale: colIndex.wholesale !== undefined ? row[colIndex.wholesale] : null,
-      purchase: colIndex.purchase !== undefined ? row[colIndex.purchase] : null,
-      stock: colIndex.stock !== undefined ? row[colIndex.stock] : 0,
-    }))
-    .filter(Boolean);
-}
-
-function buildProduct(f) {
-  const name = (f.name || "").toString().trim();
-  if (!name) return null;
-  return {
-    name,
-    code: (f.code || "").toString().trim(),
-    alias: (f.alias || "").toString().trim(),
-    category: (f.category || "").toString().trim(),
-    brand: (f.brand || "").toString().trim(),
-    mrp: toNum(f.mrp),
-    sale: toNum(f.sale),
-    wholesale: toNum(f.wholesale),
-    purchase: toNum(f.purchase),
-    stock: toNum(f.stock) || 0,
-  };
-}
-
-function toNum(v) {
-  if (v === null || v === undefined || v === "") return null;
-  const n = parseFloat(v.toString().replace(/[^0-9.\-]/g, ""));
-  return isNaN(n) ? null : n;
 }
 
 /* ---------------- DROPDOWNS ---------------- */
@@ -277,7 +172,7 @@ function applyFilters() {
       list.sort((a, b) => (b.sale ?? -Infinity) - (a.sale ?? -Infinity));
       break;
     default:
-      break; // keep CSV order
+      break; // keep original order
   }
 
   return list;
