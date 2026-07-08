@@ -4557,7 +4557,7 @@
         "mrp": 3137.5,
         "sale_price": 1570.0,
         "purchase_price": 1255.0,
-        "stock": 1.0
+        "stock": 0.0
     },
     {
         "code": 2566,
@@ -4765,7 +4765,7 @@
         "mrp": 3137.5,
         "sale_price": 1570.0,
         "purchase_price": 1255.0,
-        "stock": 1.0
+        "stock": 0.0
     },
     {
         "code": 2598,
@@ -5221,7 +5221,7 @@
         "mrp": 5220.0,
         "sale_price": 2610.0,
         "purchase_price": 2170.0,
-        "stock": 4.0
+        "stock": 3.0
     },
     {
         "code": 1606,
@@ -10421,7 +10421,7 @@
         "mrp": 5172.0,
         "sale_price": 2590.0,
         "purchase_price": 0.0,
-        "stock": -3.0
+        "stock": -4.0
     },
     {
         "code": 1831,
