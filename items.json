@@ -5941,7 +5941,7 @@
         "mrp": 3266.0,
         "sale_price": 1640.0,
         "purchase_price": 1420.0,
-        "stock": 0.0
+        "stock": -1.0
     },
     {
         "code": 2741,
