@@ -6277,7 +6277,7 @@
         "mrp": 3588.0,
         "sale_price": 1790.0,
         "purchase_price": 1495.0,
-        "stock": 1.0
+        "stock": 0.0
     },
     {
         "code": 2391,
@@ -8501,7 +8501,7 @@
         "mrp": 1296.0,
         "sale_price": 650.0,
         "purchase_price": 540.0,
-        "stock": 239.0
+        "stock": 238.0
     },
     {
         "code": 2432,
