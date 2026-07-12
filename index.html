@@ -27,8 +27,9 @@
 
   <div class="search-row">
     <div class="search-box">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon" aria-hidden="true">🔍</span>
       <input type="text" id="searchInput" placeholder="Name, alias, barcode..." autocomplete="off" />
+      <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Clear search" title="Clear search">×</button>
     </div>
     <button class="scan-btn" id="scanBtn" title="Scan barcode">▣</button>
   </div>

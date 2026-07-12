@@ -320,7 +320,7 @@ function renderGrid(list) {
   grid.innerHTML = list.map((p) => {
     const status = getStockStatus(p.stock);
     const stockClass = status === "in" ? "ok" : status === "low" ? "low" : "";
-    const stockValue = status === "out" ? "Out of Stock" : p.stock;
+    const stockValue = p.stock;
     return `
       <div class="product-card">
         <div class="product-name">${highlight(p.name, state.search)}</div>
@@ -341,10 +341,39 @@ function renderGrid(list) {
 
 /* ---------------- EVENT WIRING ---------------- */
 
-document.getElementById("searchInput").addEventListener("input", (e) => {
+function updateSearchClearButton() {
+  const searchInput = document.getElementById("searchInput");
+  const clearButton = document.getElementById("searchClearBtn");
+  if (!searchInput || !clearButton) return;
+  const hasText = searchInput.value.trim().length > 0;
+  clearButton.classList.toggle("visible", hasText);
+}
+
+function clearSearch() {
+  const searchInput = document.getElementById("searchInput");
+  if (!searchInput) return;
+  searchInput.value = "";
+  state.search = "";
+  renderAll();
+  updateSearchClearButton();
+  searchInput.focus();
+}
+
+const searchInput = document.getElementById("searchInput");
+const searchClearBtn = document.getElementById("searchClearBtn");
+searchInput.addEventListener("input", (e) => {
   state.search = e.target.value;
+  updateSearchClearButton();
   renderAll();
 });
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    e.preventDefault();
+    clearSearch();
+  }
+});
+searchClearBtn.addEventListener("click", clearSearch);
+updateSearchClearButton();
 
 document.querySelectorAll("#sortPills .pill").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -472,6 +501,7 @@ async function startScan() {
         if (codes.length) {
           document.getElementById("searchInput").value = codes[0].rawValue;
           state.search = codes[0].rawValue;
+          updateSearchClearButton();
           renderAll();
           stopScan();
         }

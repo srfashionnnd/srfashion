@@ -99,11 +99,13 @@ body{
   background:var(--bg-input);
   border:1px solid var(--border);
   border-radius:var(--radius);
-  padding:0 14px;
+  padding:0 12px;
+  gap:8px;
 }
-.search-icon{ margin-right:8px; opacity:0.7; }
+.search-icon{ display:flex; align-items:center; justify-content:center; flex-shrink:0; opacity:0.7; font-size:15px; }
 .search-box input{
   flex:1;
+  min-width:0;
   background:transparent;
   border:none;
   outline:none;
@@ -113,6 +115,27 @@ body{
   font-family:var(--font-body);
 }
 .search-box input::placeholder{ color:var(--text-dim); }
+.search-clear-btn{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:50%;
+  background:transparent;
+  color:var(--text-dim);
+  font-size:18px;
+  line-height:1;
+  cursor:pointer;
+  flex-shrink:0;
+  transition:background-color 120ms ease, color 120ms ease, transform 120ms ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.search-clear-btn.visible{ display:flex; }
+.search-clear-btn:hover{ background:var(--border); color:var(--text); }
+.search-clear-btn:active{ transform:scale(0.96); }
+.search-clear-btn:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
 .scan-btn{
   width:48px;
   background:var(--bg-input);
