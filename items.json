@@ -10912,6 +10912,14 @@
         "stock": 1.0
     },
     {
+        "code": 2816,
+        "name": "SS JAM MIX",
+        "mrp": 887.5,
+        "sale_price": 450.0,
+        "purchase_price": 355.0,
+        "stock": 156.0
+    },
+    {
         "code": 2497,
         "name": "SS JIGGLING",
         "mrp": 9412.5,
