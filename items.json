@@ -2405,7 +2405,7 @@
         "mrp": 500.0,
         "sale_price": 250.0,
         "purchase_price": 205.0,
-        "stock": 130.0
+        "stock": 129.0
     },
     {
         "code": 1619,
@@ -11325,7 +11325,7 @@
         "mrp": 2757.5,
         "sale_price": 1380.0,
         "purchase_price": 1103.0,
-        "stock": 3.0
+        "stock": 2.0
     },
     {
         "code": 2170,
