@@ -2413,7 +2413,7 @@
         "mrp": 500.0,
         "sale_price": 250.0,
         "purchase_price": 0.0,
-        "stock": -17.0
+        "stock": -18.0
     },
     {
         "code": 2755,
@@ -7333,7 +7333,7 @@
         "mrp": 636.0,
         "sale_price": 300.0,
         "purchase_price": 265.0,
-        "stock": 110.0
+        "stock": 109.0
     },
     {
         "code": 1567,
@@ -8925,7 +8925,7 @@
         "mrp": 16800.0,
         "sale_price": 8400.0,
         "purchase_price": 6720.0,
-        "stock": 0.0
+        "stock": -1.0
     },
     {
         "code": 1723,
@@ -10885,7 +10885,7 @@
         "mrp": 5125.0,
         "sale_price": 2560.0,
         "purchase_price": 2050.0,
-        "stock": 3.0
+        "stock": 2.0
     },
     {
         "code": 2495,
@@ -11309,7 +11309,7 @@
         "mrp": 3545.0,
         "sale_price": 1770.0,
         "purchase_price": 1418.0,
-        "stock": 4.0
+        "stock": 3.0
     },
     {
         "code": 2638,
