@@ -5,31 +5,16 @@ from pathlib import Path
 PROJECT_DIR = Path(__file__).parent
 
 
-def inventory_data_changed():
-    try:
-        head_result = subprocess.run(
-            ["git", "rev-parse", "HEAD:items.json"],
-            cwd=PROJECT_DIR,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        if head_result.returncode != 0:
-            return True
-
-        current_result = subprocess.run(
-            ["git", "hash-object", "items.json"],
-            cwd=PROJECT_DIR,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        if current_result.returncode != 0:
-            return True
-
-        return head_result.stdout.strip() != current_result.stdout.strip()
-    except Exception:
-        return True
+def repository_has_changes():
+    """Return True if any tracked file has changed."""
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        cwd=PROJECT_DIR,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return bool(result.stdout.strip())
 
 
 print("=" * 50)
@@ -43,21 +28,21 @@ result = subprocess.run(
     cwd=PROJECT_DIR
 )
 
-# No changes
+# No changes from export script
 if result.returncode == 10:
     print("\n✅ No changes found.")
     print("🚫 Git sync skipped.")
     sys.exit(0)
 
-# Error
+# Export failed
 if result.returncode != 0:
     print("\n❌ Export failed.")
     sys.exit(result.returncode)
 
-print("\n▶ Verifying whether inventory data changed...")
-if not inventory_data_changed():
-    print("\nℹ Inventory data unchanged.")
-    print("ℹ Sync timestamp updated locally.")
+print("\n▶ Checking repository changes...")
+
+if not repository_has_changes():
+    print("\nℹ No repository changes detected.")
     print("⏭ Git commit skipped.")
     print("⏭ Git push skipped.")
     sys.exit(0)
