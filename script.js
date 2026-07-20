@@ -43,7 +43,7 @@ function buildProductFromItem(item) {
 
   return {
     name,
-    alias: (item?.alias ?? "").toString().trim(),
+    alias: (item?.aliasCode ?? item?.alias ?? "").toString().trim(),
     group: (item?.group ?? item?.category ?? "").toString().trim(),
     print_name: (item?.print_name ?? item?.PrintName ?? "").toString().trim(),
     brand: "",
@@ -318,13 +318,43 @@ function renderGrid(list) {
     return;
   }
 
-  grid.innerHTML = list.map((p) => {
+  const adminTable = state.isAdmin ? `
+      <div class="admin-table-wrapper">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Alias Code</th>
+              <th>Product Name</th>
+              <th>Print Name</th>
+              <th>MRP</th>
+              <th>Sale Price</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${list.map((p) => `
+              <tr>
+                <td>${escapeHtml(p.alias || "")}</td>
+                <td>${escapeHtml(p.name)}</td>
+                <td>${escapeHtml(p.print_name)}</td>
+                <td>${fmtPrice(p.mrp)}</td>
+                <td>${fmtPrice(p.sale)}</td>
+                <td>${escapeHtml(p.stock.toString())}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    ` : "";
+
+  grid.innerHTML = adminTable + list.map((p) => {
     const status = getStockStatus(p.stock);
     const stockClass = status === "in" ? "ok" : status === "low" ? "low" : "";
     const stockValue = p.stock;
     return `
       <div class="product-card">
         <div class="product-name">${highlight(p.name, state.search)}</div>
+        ${p.alias ? `<div class="product-meta">Alias Code: ${escapeHtml(p.alias)}</div>` : ""}
         ${p.group ? `<div class="product-category">📁 ${escapeHtml(p.group)}</div>` : ""}
         <div class="product-boxes">
           <div class="box mrp"><span class="label">MRP</span><span class="value">${fmtPrice(p.mrp)}</span><span class="lock">🔒</span></div>
