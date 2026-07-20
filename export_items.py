@@ -23,13 +23,18 @@ try:
 
     cursor.execute("""
     SELECT
-        M.Code,
-        M.Name,
-        M.D2 AS MRP,
+        M.Alias AS Alias,
+        G.Name AS GroupName,
+        M.Name AS ProductName,
+        M.PrintName,
         M.D3 AS SalePrice,
+        M.D2 AS MRP,
         M.D4 AS PurchasePrice,
         ISNULL(S.Stock, 0) AS Stock
     FROM Master1 M
+    LEFT JOIN Master1 G
+        ON G.Code = M.ParentGrp
+       AND G.MasterType = 5
     LEFT JOIN (
         SELECT
             MasterCode1,
@@ -38,9 +43,9 @@ try:
         WHERE MasterCode2 = 201
         GROUP BY MasterCode1
     ) S
-        ON M.Code = S.MasterCode1
+        ON S.MasterCode1 = M.Code
     WHERE M.MasterType = 6
-    ORDER BY M.Name
+    ORDER BY G.Name, M.Name
     """)
 
     rows = cursor.fetchall()
@@ -49,10 +54,12 @@ try:
 
     for row in rows:
         items.append({
-            "code": int(row.Code),
-            "name": row.Name,
-            "mrp": float(row.MRP or 0),
+            "alias": (row.Alias or "").strip(),
+            "group": (row.GroupName or "").strip(),
+            "name": (row.ProductName or "").strip(),
+            "print_name": (row.PrintName or "").strip(),
             "sale_price": float(row.SalePrice or 0),
+            "mrp": float(row.MRP or 0),
             "purchase_price": float(row.PurchasePrice or 0),
             "stock": float(row.Stock or 0)
         })

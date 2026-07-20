@@ -6,8 +6,8 @@
       the same folder. Your Python export script keeps updating
       that file with the latest Busy export.
    2. items.json is an array of objects like:
-      { "code":2035, "name":"Product Name", "mrp":819.2,
-        "sale_price":740, "purchase_price":640, "stock":-3 }
+      { "alias":"ABC123", "group":"LACHA", "name":"Product Name", "print_name":"Product Display Name",
+        "mrp":819.2, "sale_price":740, "purchase_price":640, "stock":-3 }
    3. Change ADMIN_PASSWORD to whatever password you want to use
       to unlock the Admin view (shows Purchase Price box).
       NOTE: this is a simple front-end lock, not real security —
@@ -43,9 +43,9 @@ function buildProductFromItem(item) {
 
   return {
     name,
-    code: (item?.code ?? "").toString().trim(),
-    alias: "",
-    category: "",
+    alias: (item?.alias ?? item?.code ?? "").toString().trim(),
+    group: (item?.group ?? item?.category ?? "").toString().trim(),
+    print_name: (item?.print_name ?? item?.PrintName ?? "").toString().trim(),
     brand: "",
     mrp: Number(item?.mrp ?? 0),
     sale: Number(item?.sale_price ?? 0),
@@ -160,7 +160,7 @@ async function loadStock({ showLoading = false } = {}) {
 
 function populateDropdowns() {
   const brands = [...new Set(ALL_PRODUCTS.map((p) => p.brand).filter(Boolean))].sort();
-  const groups = [...new Set(ALL_PRODUCTS.map((p) => p.category).filter(Boolean))].sort();
+  const groups = [...new Set(ALL_PRODUCTS.map((p) => p.group).filter(Boolean))].sort();
 
   document.getElementById("brandDropdown").style.display = brands.length ? "" : "none";
   document.getElementById("groupDropdown").style.display = groups.length ? "" : "none";
@@ -223,8 +223,9 @@ function applyFilters() {
     list = list.filter((p) => {
       const name = (p.name || "").toString().toLowerCase();
       const alias = (p.alias || "").toString().toLowerCase();
-      const code = (p.code || "").toString().toLowerCase();
-      return name.includes(q) || alias.includes(q) || code.includes(q);
+      const printName = (p.print_name || "").toString().toLowerCase();
+      const group = (p.group || "").toString().toLowerCase();
+      return name.includes(q) || alias.includes(q) || printName.includes(q) || group.includes(q);
     });
   }
 
@@ -236,7 +237,7 @@ function applyFilters() {
     list = list.filter((p) => p.brand === state.brand);
   }
   if (state.group !== "all") {
-    list = list.filter((p) => p.category === state.group);
+    list = list.filter((p) => p.group === state.group);
   }
 
   if (state.minPrice !== null) {
@@ -248,7 +249,7 @@ function applyFilters() {
 
   switch (state.sort) {
     case "group":
-      list.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
+      list.sort((a, b) => a.group.localeCompare(b.group) || a.name.localeCompare(b.name));
       break;
     case "az":
       list.sort((a, b) => a.name.localeCompare(b.name));
@@ -324,7 +325,7 @@ function renderGrid(list) {
     return `
       <div class="product-card">
         <div class="product-name">${highlight(p.name, state.search)}</div>
-        ${p.category ? `<div class="product-category">📁 ${escapeHtml(p.category)}</div>` : ""}
+        ${p.group ? `<div class="product-category">📁 ${escapeHtml(p.group)}</div>` : ""}
         <div class="product-boxes">
           <div class="box mrp"><span class="label">MRP</span><span class="value">${fmtPrice(p.mrp)}</span><span class="lock">🔒</span></div>
           <div class="box sale"><span class="label">Sale Price</span><span class="value">${fmtPrice(p.sale)}</span><span class="lock">🔒</span></div>
