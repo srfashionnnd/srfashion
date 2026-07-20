@@ -41,9 +41,12 @@ function buildProductFromItem(item) {
     return null;
   }
 
+  const aliasCode = (item?.aliasCode ?? item?.alias ?? "").toString().trim();
+
   return {
     name,
-    alias: (item?.aliasCode ?? item?.alias ?? "").toString().trim(),
+    aliasCode,
+    alias: aliasCode,
     group: (item?.group ?? item?.category ?? "").toString().trim(),
     print_name: (item?.print_name ?? item?.PrintName ?? "").toString().trim(),
     brand: "",
@@ -222,11 +225,7 @@ function applyFilters() {
     const q = state.search.trim().toLowerCase();
     list = list.filter((p) => {
       const name = (p.name || "").toString().toLowerCase();
-      const alias = (p.alias || "").toString().toLowerCase();
-      const printName = (p.print_name || "").toString().toLowerCase();
-      const group = (p.group || "").toString().toLowerCase();
-      return name.includes(q) || alias.includes(q) || printName.includes(q) || group.includes(q);
-    });
+      const alias = (p.aliasCode || p.alias || "").toString().toLowerCase();
   }
 
   if (state.stockFilter !== "all") {
@@ -334,7 +333,7 @@ function renderGrid(list) {
           <tbody>
             ${list.map((p) => `
               <tr>
-                <td>${escapeHtml(p.alias || "")}</td>
+                <td>${escapeHtml(p.aliasCode || p.alias || "")}</td>
                 <td>${escapeHtml(p.name)}</td>
                 <td>${escapeHtml(p.print_name)}</td>
                 <td>${fmtPrice(p.mrp)}</td>
@@ -354,7 +353,7 @@ function renderGrid(list) {
     return `
       <div class="product-card">
         <div class="product-name">${highlight(p.name, state.search)}</div>
-        ${p.alias ? `<div class="product-meta">Alias Code: ${escapeHtml(p.alias)}</div>` : ""}
+        ${p.aliasCode ? `<div class="product-meta">Alias Code: ${escapeHtml(p.aliasCode)}</div>` : ""}
         ${p.group ? `<div class="product-category">📁 ${escapeHtml(p.group)}</div>` : ""}
         <div class="product-boxes">
           <div class="box mrp"><span class="label">MRP</span><span class="value">${fmtPrice(p.mrp)}</span><span class="lock">🔒</span></div>
