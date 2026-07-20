@@ -1,8 +1,25 @@
 import subprocess
 import sys
 from pathlib import Path
+from datetime import datetime
 
 PROJECT_DIR = Path(__file__).parent
+LOG_FILE = PROJECT_DIR / "auto_update.log"
+
+
+def log(message):
+    timestamp = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+    line = f"[{timestamp}] {message}"
+
+    # Console (ignore Unicode issues in Task Scheduler)
+    try:
+        print(line)
+    except UnicodeEncodeError:
+        pass
+
+    # Log file
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(line + "\n")
 
 
 def repository_has_changes():
@@ -17,11 +34,11 @@ def repository_has_changes():
     return bool(result.stdout.strip())
 
 
-print("=" * 50)
-print("SR FASHION AUTO UPDATE")
-print("=" * 50)
+log("=" * 50)
+log("SR FASHION AUTO UPDATE")
+log("=" * 50)
 
-print("\n▶ Running export_items.py...")
+log("Running export_items.py...")
 
 result = subprocess.run(
     [sys.executable, "export_items.py"],
@@ -30,24 +47,24 @@ result = subprocess.run(
 
 # No changes from export script
 if result.returncode == 10:
-    print("\n✅ No changes found.")
-    print("🚫 Git sync skipped.")
+    log("No changes found.")
+    log("Git sync skipped.")
     sys.exit(0)
 
 # Export failed
 if result.returncode != 0:
-    print("\n❌ Export failed.")
+    log("Export failed.")
     sys.exit(result.returncode)
 
-print("\n▶ Checking repository changes...")
+log("Checking repository changes...")
 
 if not repository_has_changes():
-    print("\nℹ No repository changes detected.")
-    print("⏭ Git commit skipped.")
-    print("⏭ Git push skipped.")
+    log("No repository changes detected.")
+    log("Git commit skipped.")
+    log("Git push skipped.")
     sys.exit(0)
 
-print("\n▶ Running git_sync.py...")
+log("Running git_sync.py...")
 
 result = subprocess.run(
     [sys.executable, "git_sync.py"],
@@ -55,7 +72,7 @@ result = subprocess.run(
 )
 
 if result.returncode != 0:
-    print("\n❌ Git sync failed.")
+    log("Git sync failed.")
     sys.exit(result.returncode)
 
-print("\n🎉 WEBSITE UPDATED SUCCESSFULLY!")
+log("WEBSITE UPDATED SUCCESSFULLY!")

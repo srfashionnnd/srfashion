@@ -1,0 +1,365 @@
+==================================================
+[Mon 07/20/2026 15:33:28.84] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+[20-07-2026 15:33:29] ==================================================
+[20-07-2026 15:33:29] SR FASHION AUTO UPDATE
+[20-07-2026 15:33:29] ==================================================
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 34, in <module>
+    log("\u25b6 Running export_items.py...")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 13, in log
+    print(line)
+    ~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 22: character maps to <undefined>
+
+[Mon 07/20/2026 15:33:29.16] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 15:33:42.80] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+[20-07-2026 15:33:42] ==================================================
+[20-07-2026 15:33:42] SR FASHION AUTO UPDATE
+[20-07-2026 15:33:42] ==================================================
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 34, in <module>
+    log("\u25b6 Running export_items.py...")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 13, in log
+    print(line)
+    ~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 22: character maps to <undefined>
+
+[Mon 07/20/2026 15:33:43.05] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 15:35:30.71] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+[20-07-2026 15:35:30] ==================================================
+[20-07-2026 15:35:30] SR FASHION AUTO UPDATE
+[20-07-2026 15:35:30] ==================================================
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 34, in <module>
+    log("\u25b6 Running export_items.py...")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 13, in log
+    print(line)
+    ~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 22: character maps to <undefined>
+
+[Mon 07/20/2026 15:35:30.99] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 15:43:28.85] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+[20-07-2026 15:43:29] ==================================================
+[20-07-2026 15:43:29] SR FASHION AUTO UPDATE
+[20-07-2026 15:43:29] ==================================================
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 34, in <module>
+    log("\u25b6 Running export_items.py...")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 13, in log
+    print(line)
+    ~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 22: character maps to <undefined>
+
+[Mon 07/20/2026 15:43:29.16] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 15:45:30.63] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+[20-07-2026 15:45:30] ==================================================
+[20-07-2026 15:45:30] SR FASHION AUTO UPDATE
+[20-07-2026 15:45:30] ==================================================
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 34, in <module>
+    log("\u25b6 Running export_items.py...")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\auto_update.py", line 13, in log
+    print(line)
+    ~~~~~^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 22: character maps to <undefined>
+
+[Mon 07/20/2026 15:45:30.88] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 15:53:28.84] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 22, in <module>
+    print("\u2705 Connected Successfully!")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 106, in <module>
+    print("\n\u274c ERROR:")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 2: character maps to <undefined>
+[20-07-2026 15:53:29] ==================================================
+[20-07-2026 15:53:29] SR FASHION AUTO UPDATE
+[20-07-2026 15:53:29] ==================================================
+[20-07-2026 15:53:29] Running export_items.py...
+[20-07-2026 15:53:29] Export failed.
+
+[Mon 07/20/2026 15:53:29.36] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 15:55:30.66] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 22, in <module>
+    print("\u2705 Connected Successfully!")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 106, in <module>
+    print("\n\u274c ERROR:")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 2: character maps to <undefined>
+[20-07-2026 15:55:30] ==================================================
+[20-07-2026 15:55:30] SR FASHION AUTO UPDATE
+[20-07-2026 15:55:30] ==================================================
+[20-07-2026 15:55:30] Running export_items.py...
+[20-07-2026 15:55:31] Export failed.
+
+[Mon 07/20/2026 15:55:31.22] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:03:28.92] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 22, in <module>
+    print("\u2705 Connected Successfully!")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 106, in <module>
+    print("\n\u274c ERROR:")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 2: character maps to <undefined>
+[20-07-2026 16:03:29] ==================================================
+[20-07-2026 16:03:29] SR FASHION AUTO UPDATE
+[20-07-2026 16:03:29] ==================================================
+[20-07-2026 16:03:29] Running export_items.py...
+[20-07-2026 16:03:29] Export failed.
+
+[Mon 07/20/2026 16:03:29.89] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:05:30.66] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 22, in <module>
+    print("\u2705 Connected Successfully!")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\export_items.py", line 106, in <module>
+    print("\n\u274c ERROR:")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 2: character maps to <undefined>
+[20-07-2026 16:05:30] ==================================================
+[20-07-2026 16:05:30] SR FASHION AUTO UPDATE
+[20-07-2026 16:05:30] ==================================================
+[20-07-2026 16:05:30] Running export_items.py...
+[20-07-2026 16:05:31] Export failed.
+
+[Mon 07/20/2026 16:05:31.18] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:13:29.17] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Connected Successfully.
+Sync metadata refreshed.
+last-sync.json updated.
+========================================
+SR FASHION GIT AUTO SYNC
+========================================
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\git_sync.py", line 41, in <module>
+    print("1\ufe0f\u20e3 Git Add")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 1-2: character maps to <undefined>
+[20-07-2026 16:13:29] ==================================================
+[20-07-2026 16:13:29] SR FASHION AUTO UPDATE
+[20-07-2026 16:13:29] ==================================================
+[20-07-2026 16:13:29] Running export_items.py...
+[20-07-2026 16:13:29] Checking repository changes...
+[20-07-2026 16:13:29] Running git_sync.py...
+[20-07-2026 16:13:29] Git sync failed.
+
+[Mon 07/20/2026 16:13:30.00] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:15:30.67] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Connected Successfully.
+Sync metadata refreshed.
+last-sync.json updated.
+========================================
+SR FASHION GIT AUTO SYNC
+========================================
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\git_sync.py", line 41, in <module>
+    print("1\ufe0f\u20e3 Git Add")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 1-2: character maps to <undefined>
+[20-07-2026 16:15:30] ==================================================
+[20-07-2026 16:15:30] SR FASHION AUTO UPDATE
+[20-07-2026 16:15:30] ==================================================
+[20-07-2026 16:15:30] Running export_items.py...
+[20-07-2026 16:15:31] Checking repository changes...
+[20-07-2026 16:15:31] Running git_sync.py...
+[20-07-2026 16:15:31] Git sync failed.
+
+[Mon 07/20/2026 16:15:31.32] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:23:28.88] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Connected Successfully.
+Sync metadata refreshed.
+last-sync.json updated.
+========================================
+SR FASHION GIT AUTO SYNC
+========================================
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\git_sync.py", line 41, in <module>
+    print("1\ufe0f\u20e3 Git Add")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 1-2: character maps to <undefined>
+[20-07-2026 16:23:29] ==================================================
+[20-07-2026 16:23:29] SR FASHION AUTO UPDATE
+[20-07-2026 16:23:29] ==================================================
+[20-07-2026 16:23:29] Running export_items.py...
+[20-07-2026 16:23:29] Checking repository changes...
+[20-07-2026 16:23:29] Running git_sync.py...
+[20-07-2026 16:23:29] Git sync failed.
+
+[Mon 07/20/2026 16:23:29.74] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:25:30.81] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Connected Successfully.
+Sync metadata refreshed.
+last-sync.json updated.
+========================================
+SR FASHION GIT AUTO SYNC
+========================================
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\srfashionndclaude\git_sync.py", line 41, in <module>
+    print("1\ufe0f\u20e3 Git Add")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 1-2: character maps to <undefined>
+[20-07-2026 16:25:31] ==================================================
+[20-07-2026 16:25:31] SR FASHION AUTO UPDATE
+[20-07-2026 16:25:31] ==================================================
+[20-07-2026 16:25:31] Running export_items.py...
+[20-07-2026 16:25:31] Checking repository changes...
+[20-07-2026 16:25:31] Running git_sync.py...
+[20-07-2026 16:25:31] Git sync failed.
+
+[Mon 07/20/2026 16:25:31.53] Task Finished
+==================================================
+
+==================================================
+[Mon 07/20/2026 16:33:28.84] Task Scheduler Started
+Working Directory: C:\Users\ASUS\Desktop\srfashionndclaude
+
+Connected Successfully.
+Sync metadata refreshed.
+last-sync.json updated.

@@ -19,7 +19,7 @@ try:
     conn = pyodbc.connect(connection_string)
     cursor = conn.cursor()
 
-    print("✅ Connected Successfully!")
+    print("Connected Successfully.")
 
     cursor.execute("""
     SELECT
@@ -76,6 +76,7 @@ try:
     last_sync = {
         "last_updated": datetime.now().strftime("%d %b %Y %I:%M:%S %p")
     }
+
     new_last_sync_json = json.dumps(last_sync, indent=4)
 
     with open("last-sync.json", "w", encoding="utf-8") as f:
@@ -84,25 +85,30 @@ try:
     if new_hash != old_hash:
         with open("items.json", "w", encoding="utf-8") as f:
             f.write(new_json)
-        print("✅ Changes detected.")
-        print("✅ items.json updated.")
-        print("✅ last-sync.json refreshed.")
-        print(f"📦 Total Products: {len(items)}")
+
+        print("Changes detected.")
+        print("items.json updated.")
+        print("last-sync.json refreshed.")
+        print(f"Total Products: {len(items)}")
+
         conn.close()
         sys.exit(0)
 
     if old_last_sync_json != new_last_sync_json:
-        print("✅ Sync metadata refreshed.")
-        print("✅ last-sync.json updated.")
+        print("Sync metadata refreshed.")
+        print("last-sync.json updated.")
+
         conn.close()
         sys.exit(0)
 
-    print("✅ No data changes detected.")
-    print("⏭ Nothing to update.")
+    print("No data changes detected.")
+    print("Nothing to update.")
+
     conn.close()
     sys.exit(10)
 
 except Exception as e:
-    print("\n❌ ERROR:")
-    print(e)
+    print()
+    print("ERROR:")
+    print(str(e))
     sys.exit(1)
