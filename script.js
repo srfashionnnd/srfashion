@@ -43,7 +43,7 @@ function buildProductFromItem(item) {
 
   return {
     name,
-    alias: (item?.alias ?? item?.code ?? "").toString().trim(),
+    alias: (item?.alias ?? "").toString().trim(),
     group: (item?.group ?? item?.category ?? "").toString().trim(),
     print_name: (item?.print_name ?? item?.PrintName ?? "").toString().trim(),
     brand: "",
