@@ -131,6 +131,7 @@ body{
   flex-shrink:0;
   transition:background-color 120ms ease, color 120ms ease, transform 120ms ease;
   -webkit-tap-highlight-color:transparent;
+  touch-action: manipulation;
 }
 .search-clear-btn.visible{ display:flex; }
 .search-clear-btn:hover{ background:var(--border); color:var(--text); }

@@ -349,14 +349,39 @@ function updateSearchClearButton() {
   clearButton.classList.toggle("visible", hasText);
 }
 
-function clearSearch() {
-  const searchInput = document.getElementById("searchInput");
-  if (!searchInput) return;
-  searchInput.value = "";
-  state.search = "";
-  renderAll();
-  updateSearchClearButton();
-  searchInput.focus();
+let clearSearchLocked = false;
+
+function clearSearch(event) {
+  if (clearSearchLocked) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    return;
+  }
+
+  clearSearchLocked = true;
+
+  try {
+    const searchInput = document.getElementById("searchInput");
+    if (!searchInput) return;
+
+    if (!searchInput.value.trim()) {
+      updateSearchClearButton();
+      searchInput.focus();
+      return;
+    }
+
+    searchInput.value = "";
+    state.search = "";
+    renderAll();
+    updateSearchClearButton();
+    searchInput.focus();
+  } finally {
+    window.requestAnimationFrame(() => {
+      clearSearchLocked = false;
+    });
+  }
 }
 
 const searchInput = document.getElementById("searchInput");
@@ -369,10 +394,23 @@ searchInput.addEventListener("input", (e) => {
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     e.preventDefault();
-    clearSearch();
+    clearSearch(e);
   }
 });
-searchClearBtn.addEventListener("click", clearSearch);
+searchClearBtn.addEventListener("pointerdown", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  clearSearch(e);
+});
+searchClearBtn.addEventListener("click", (e) => {
+  clearSearch(e);
+});
+searchClearBtn.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    clearSearch(e);
+  }
+});
 updateSearchClearButton();
 
 document.querySelectorAll("#sortPills .pill").forEach((btn) => {
