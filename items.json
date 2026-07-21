@@ -2070,7 +2070,7 @@
         "stock": -5.0
     },
     {
-        "alias": "",
+        "alias": "001092",
         "group": "COTTON SUIT",
         "name": "KKC MEMSAAB",
         "print_name": "COTTONSUIT",
@@ -2080,7 +2080,7 @@
         "stock": 8.0
     },
     {
-        "alias": "",
+        "alias": "001093",
         "group": "COTTON SUIT",
         "name": "KKC SEHNAAZ NX",
         "print_name": "COTTONSUIT",
@@ -2130,7 +2130,7 @@
         "stock": 1.0
     },
     {
-        "alias": "",
+        "alias": "001096",
         "group": "COTTON SUIT",
         "name": "MASTI CHUNARI",
         "print_name": "COTTONSUIT",
@@ -2160,7 +2160,7 @@
         "stock": 5.0
     },
     {
-        "alias": "",
+        "alias": "001097",
         "group": "COTTON SUIT",
         "name": "MASTI SANA",
         "print_name": "COTTONSUIT",
@@ -4228,6 +4228,16 @@
         "mrp": 3392.0,
         "purchase_price": 2650.0,
         "stock": 0.0
+    },
+    {
+        "alias": "001086",
+        "group": "General",
+        "name": "KC SUPER SIX",
+        "print_name": "Suit",
+        "sale_price": 790.0,
+        "mrp": 1190.63,
+        "purchase_price": 635.0,
+        "stock": 4.0
     },
     {
         "alias": "001016",
@@ -8700,7 +8710,7 @@
         "stock": 0.0
     },
     {
-        "alias": "",
+        "alias": "001094",
         "group": "REDYMADE",
         "name": "MASTER BLACK BEAUTY",
         "print_name": "Ready Made",
@@ -8710,7 +8720,7 @@
         "stock": 20.0
     },
     {
-        "alias": "",
+        "alias": "001095",
         "group": "REDYMADE",
         "name": "MASTER KOLAVARI",
         "print_name": "Ready Made",
@@ -8810,7 +8820,7 @@
         "stock": -1.0
     },
     {
-        "alias": "",
+        "alias": "001098",
         "group": "REDYMADE",
         "name": "MYSTIC CHAHAT",
         "print_name": "Ready Made",
@@ -10038,6 +10048,16 @@
         "mrp": 759.0,
         "purchase_price": 330.0,
         "stock": -4.0
+    },
+    {
+        "alias": "001084",
+        "group": "SUIT",
+        "name": "DIL DEEWANA",
+        "print_name": "Suit",
+        "sale_price": 590.0,
+        "mrp": 918.75,
+        "purchase_price": 490.0,
+        "stock": 8.0
     },
     {
         "alias": "001058",
@@ -11360,6 +11380,16 @@
         "stock": 0.0
     },
     {
+        "alias": "001085",
+        "group": "SUIT",
+        "name": "KC PHOTOGRAH",
+        "print_name": "Suit",
+        "sale_price": 790.0,
+        "mrp": 1190.63,
+        "purchase_price": 635.0,
+        "stock": 4.0
+    },
+    {
         "alias": "0000278",
         "group": "SUIT",
         "name": "KC PIZOOKIE",
@@ -11720,6 +11750,56 @@
         "stock": 0.0
     },
     {
+        "alias": "001087",
+        "group": "SUIT",
+        "name": "KF ANITA",
+        "print_name": "Suit",
+        "sale_price": 900.0,
+        "mrp": 1350.0,
+        "purchase_price": 720.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001088",
+        "group": "SUIT",
+        "name": "KF AYUSHI",
+        "print_name": "Suit",
+        "sale_price": 620.0,
+        "mrp": 928.13,
+        "purchase_price": 495.0,
+        "stock": 26.0
+    },
+    {
+        "alias": "001089",
+        "group": "SUIT",
+        "name": "KF RIYA",
+        "print_name": "Suit",
+        "sale_price": 600.0,
+        "mrp": 903.75,
+        "purchase_price": 482.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001090",
+        "group": "SUIT",
+        "name": "KF SALONI",
+        "print_name": "Suit",
+        "sale_price": 890.0,
+        "mrp": 1331.25,
+        "purchase_price": 710.0,
+        "stock": 4.0
+    },
+    {
+        "alias": "001091",
+        "group": "SUIT",
+        "name": "KF TANYA",
+        "print_name": "Suit",
+        "sale_price": 780.0,
+        "mrp": 1171.88,
+        "purchase_price": 625.0,
+        "stock": 4.0
+    },
+    {
         "alias": "000369",
         "group": "SUIT",
         "name": "KKC AASMA",
@@ -11948,6 +12028,26 @@
         "mrp": 588.8,
         "purchase_price": 460.0,
         "stock": 0.0
+    },
+    {
+        "alias": "001099",
+        "group": "SUIT",
+        "name": "NYN CAMERIC MONIKA",
+        "print_name": "Suit",
+        "sale_price": 510.0,
+        "mrp": 759.38,
+        "purchase_price": 405.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001100",
+        "group": "SUIT",
+        "name": "NYN CAMERIC SHAKTI",
+        "print_name": "Suit",
+        "sale_price": 510.0,
+        "mrp": 759.38,
+        "purchase_price": 405.0,
+        "stock": 4.0
     },
     {
         "alias": "000709",
@@ -12250,6 +12350,16 @@
         "stock": 4.0
     },
     {
+        "alias": "001101",
+        "group": "SUIT",
+        "name": "OI CHHAVI",
+        "print_name": "Suit",
+        "sale_price": 610.0,
+        "mrp": 918.75,
+        "purchase_price": 490.0,
+        "stock": 8.0
+    },
+    {
         "alias": "000505",
         "group": "SUIT",
         "name": "OI FREE HAND",
@@ -12398,6 +12508,26 @@
         "mrp": 1500.0,
         "purchase_price": 600.0,
         "stock": 0.0
+    },
+    {
+        "alias": "001102",
+        "group": "SUIT",
+        "name": "OM SAI BUTTER PAPDI",
+        "print_name": "Suit",
+        "sale_price": 560.0,
+        "mrp": 843.75,
+        "purchase_price": 450.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001103",
+        "group": "SUIT",
+        "name": "OM SAI WELCOME",
+        "print_name": "Suit",
+        "sale_price": 530.0,
+        "mrp": 796.88,
+        "purchase_price": 425.0,
+        "stock": 4.0
     },
     {
         "alias": "0000075",
@@ -13088,6 +13218,16 @@
         "mrp": 736.0,
         "purchase_price": 320.0,
         "stock": 0.0
+    },
+    {
+        "alias": "001104",
+        "group": "SUIT",
+        "name": "VLC MAGIC",
+        "print_name": "Suit",
+        "sale_price": 430.0,
+        "mrp": 646.88,
+        "purchase_price": 345.0,
+        "stock": 12.0
     },
     {
         "alias": "000463",
