@@ -2070,6 +2070,26 @@
         "stock": -5.0
     },
     {
+        "alias": "",
+        "group": "COTTON SUIT",
+        "name": "KKC MEMSAAB",
+        "print_name": "COTTONSUIT",
+        "sale_price": 280.0,
+        "mrp": 420.0,
+        "purchase_price": 241.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "",
+        "group": "COTTON SUIT",
+        "name": "KKC SEHNAAZ NX",
+        "print_name": "COTTONSUIT",
+        "sale_price": 280.0,
+        "mrp": 420.0,
+        "purchase_price": 241.0,
+        "stock": 32.0
+    },
+    {
         "alias": "0000234",
         "group": "COTTON SUIT",
         "name": "KKC SEHNAZ",
@@ -2110,6 +2130,16 @@
         "stock": 1.0
     },
     {
+        "alias": "",
+        "group": "COTTON SUIT",
+        "name": "MASTI CHUNARI",
+        "print_name": "COTTONSUIT",
+        "sale_price": 380.0,
+        "mrp": 570.0,
+        "purchase_price": 345.0,
+        "stock": 20.0
+    },
+    {
         "alias": "0000211",
         "group": "COTTON SUIT",
         "name": "MASTI KALASH",
@@ -2117,7 +2147,7 @@
         "sale_price": 400.0,
         "mrp": 800.0,
         "purchase_price": 340.0,
-        "stock": 34.0
+        "stock": 46.0
     },
     {
         "alias": "000472",
@@ -2126,8 +2156,18 @@
         "print_name": "SUIT",
         "sale_price": 400.0,
         "mrp": 800.0,
-        "purchase_price": 365.0,
-        "stock": -7.0
+        "purchase_price": 340.0,
+        "stock": 5.0
+    },
+    {
+        "alias": "",
+        "group": "COTTON SUIT",
+        "name": "MASTI SANA",
+        "print_name": "COTTONSUIT",
+        "sale_price": 380.0,
+        "mrp": 570.0,
+        "purchase_price": 340.0,
+        "stock": 20.0
     },
     {
         "alias": "0000210",
