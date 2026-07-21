@@ -8667,7 +8667,7 @@
         "sale_price": 710.0,
         "mrp": 1059.38,
         "purchase_price": 565.0,
-        "stock": 0.0
+        "stock": 20.0
     },
     {
         "alias": "",
@@ -8677,7 +8677,7 @@
         "sale_price": 640.0,
         "mrp": 956.25,
         "purchase_price": 510.0,
-        "stock": 0.0
+        "stock": 20.0
     },
     {
         "alias": "000996",
@@ -8777,7 +8777,7 @@
         "sale_price": 620.0,
         "mrp": 937.5,
         "purchase_price": 500.0,
-        "stock": 0.0
+        "stock": 16.0
     },
     {
         "alias": "0000205",
@@ -9946,8 +9946,8 @@
         "print_name": "AMD WORK",
         "sale_price": 250.0,
         "mrp": 500.0,
-        "purchase_price": 205.0,
-        "stock": 129.0
+        "purchase_price": 203.0,
+        "stock": 177.0
     },
     {
         "alias": "0000301",
