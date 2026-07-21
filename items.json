@@ -8660,6 +8660,26 @@
         "stock": 0.0
     },
     {
+        "alias": "",
+        "group": "REDYMADE",
+        "name": "MASTER BLACK BEAUTY",
+        "print_name": "Ready Made",
+        "sale_price": 710.0,
+        "mrp": 1059.38,
+        "purchase_price": 565.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "REDYMADE",
+        "name": "MASTER KOLAVARI",
+        "print_name": "Ready Made",
+        "sale_price": 640.0,
+        "mrp": 956.25,
+        "purchase_price": 510.0,
+        "stock": 0.0
+    },
+    {
         "alias": "000996",
         "group": "REDYMADE",
         "name": "MOHAK AHD 215-1",
@@ -8748,6 +8768,16 @@
         "mrp": 4825.0,
         "purchase_price": 1930.0,
         "stock": -1.0
+    },
+    {
+        "alias": "",
+        "group": "REDYMADE",
+        "name": "MYSTIC CHAHAT",
+        "print_name": "Ready Made",
+        "sale_price": 620.0,
+        "mrp": 937.5,
+        "purchase_price": 500.0,
+        "stock": 0.0
     },
     {
         "alias": "0000205",
