@@ -226,6 +226,9 @@ function applyFilters() {
     list = list.filter((p) => {
       const name = (p.name || "").toString().toLowerCase();
       const alias = (p.aliasCode || p.alias || "").toString().toLowerCase();
+      const printName = (p.print_name || "").toString().toLowerCase();
+      return name.includes(q) || alias.includes(q) || printName.includes(q);
+    });
   }
 
   if (state.stockFilter !== "all") {
@@ -307,7 +310,7 @@ function renderCounts(filtered) {
 function renderGrid(list) {
   const grid = document.getElementById("productGrid");
 
-  if (!state.search.trim() && state.stockFilter === "all" && state.brand === "all" && state.group === "all") {
+  if (!ALL_PRODUCTS.length) {
     grid.innerHTML = "";
     return;
   }
