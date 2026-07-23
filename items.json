@@ -11200,6 +11200,16 @@
         "stock": 3.0
     },
     {
+        "alias": "",
+        "group": "SUIT",
+        "name": "KC LICHI LOVE",
+        "print_name": "KC LICHI LOVE",
+        "sale_price": 1650.0,
+        "mrp": 2250.0,
+        "purchase_price": 1500.0,
+        "stock": 0.0
+    },
+    {
         "alias": "0000281",
         "group": "SUIT",
         "name": "KC LONDON CAKE",
