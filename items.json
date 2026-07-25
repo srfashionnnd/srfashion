@@ -1577,7 +1577,7 @@
         "sale_price": 400.0,
         "mrp": 755.0,
         "purchase_price": 340.0,
-        "stock": 29.0
+        "stock": 27.0
     },
     {
         "alias": "000272",
@@ -11807,7 +11807,7 @@
         "sale_price": 780.0,
         "mrp": 1171.88,
         "purchase_price": 625.0,
-        "stock": 4.0
+        "stock": 3.0
     },
     {
         "alias": "000369",
