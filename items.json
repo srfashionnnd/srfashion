@@ -3830,6 +3830,36 @@
         "stock": -19.0
     },
     {
+        "alias": "",
+        "group": "General",
+        "name": "JT AAFREEN NOOR",
+        "print_name": "Cotton Suit",
+        "sale_price": 450.0,
+        "mrp": 759.38,
+        "purchase_price": 405.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "JT AKIRA",
+        "print_name": "Cotton Suit",
+        "sale_price": 380.0,
+        "mrp": 609.38,
+        "purchase_price": 325.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "JT ALIA",
+        "print_name": "Cotton Suit",
+        "sale_price": 380.0,
+        "mrp": 609.38,
+        "purchase_price": 325.0,
+        "stock": 0.0
+    },
+    {
         "alias": "000866",
         "group": "General",
         "name": "KAHD 491-09",
@@ -4260,6 +4290,86 @@
         "stock": 0.0
     },
     {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.1",
+        "print_name": "Suit",
+        "sale_price": 590.0,
+        "mrp": 883.13,
+        "purchase_price": 471.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.2",
+        "print_name": "Suit",
+        "sale_price": 600.0,
+        "mrp": 901.88,
+        "purchase_price": 481.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.3",
+        "print_name": "Suit",
+        "sale_price": 560.0,
+        "mrp": 843.75,
+        "purchase_price": 450.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.4",
+        "print_name": "Suit",
+        "sale_price": 610.0,
+        "mrp": 922.5,
+        "purchase_price": 492.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.5",
+        "print_name": "Suit",
+        "sale_price": 570.0,
+        "mrp": 862.5,
+        "purchase_price": 460.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.6",
+        "print_name": "Suit",
+        "sale_price": 550.0,
+        "mrp": 821.25,
+        "purchase_price": 438.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.7",
+        "print_name": "Suit",
+        "sale_price": 590.0,
+        "mrp": 883.13,
+        "purchase_price": 471.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "MF NO.8",
+        "print_name": "Suit",
+        "sale_price": 610.0,
+        "mrp": 922.5,
+        "purchase_price": 492.0,
+        "stock": 0.0
+    },
+    {
         "alias": "000924",
         "group": "General",
         "name": "MKTAHD 2362-1",
@@ -4558,6 +4668,16 @@
         "mrp": 0.0,
         "purchase_price": 0.0,
         "stock": -6.0
+    },
+    {
+        "alias": "",
+        "group": "General",
+        "name": "VLC LOCHA",
+        "print_name": "Suit",
+        "sale_price": 550.0,
+        "mrp": 821.25,
+        "purchase_price": 438.0,
+        "stock": 0.0
     },
     {
         "alias": "0000345",
