@@ -10890,6 +10890,16 @@
         "stock": -4.0
     },
     {
+        "alias": "",
+        "group": "SUIT",
+        "name": "KC BELLA CRUST",
+        "print_name": "Suit",
+        "sale_price": 1290.0,
+        "mrp": 2575.0,
+        "purchase_price": 1030.0,
+        "stock": 0.0
+    },
+    {
         "alias": "000659",
         "group": "SUIT",
         "name": "KC BLUE BULLETE",
@@ -10957,6 +10967,16 @@
         "sale_price": 1720.0,
         "mrp": 3438.0,
         "purchase_price": 1495.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "SUIT",
+        "name": "KC CLASSY CHARM",
+        "print_name": "Suit",
+        "sale_price": 1990.0,
+        "mrp": 3975.0,
+        "purchase_price": 1590.0,
         "stock": 0.0
     },
     {
@@ -11230,6 +11250,16 @@
         "stock": -1.0
     },
     {
+        "alias": "",
+        "group": "SUIT",
+        "name": "KC JUICY DOLL",
+        "print_name": "Suit",
+        "sale_price": 1990.0,
+        "mrp": 3975.0,
+        "purchase_price": 1590.0,
+        "stock": 0.0
+    },
+    {
         "alias": "000777",
         "group": "SUIT",
         "name": "KC KITE KINGDOM",
@@ -11450,6 +11480,16 @@
         "stock": 0.0
     },
     {
+        "alias": "",
+        "group": "SUIT",
+        "name": "KC POWER LINK",
+        "print_name": "Suit",
+        "sale_price": 1290.0,
+        "mrp": 2575.0,
+        "purchase_price": 1030.0,
+        "stock": 0.0
+    },
+    {
         "alias": "0000266",
         "group": "SUIT",
         "name": "KC PRIME POINT",
@@ -11637,6 +11677,16 @@
         "sale_price": 1740.0,
         "mrp": 3475.0,
         "purchase_price": 1390.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "",
+        "group": "SUIT",
+        "name": "KC SPARK FLOW",
+        "print_name": "Suit",
+        "sale_price": 1290.0,
+        "mrp": 2575.0,
+        "purchase_price": 1030.0,
         "stock": 0.0
     },
     {
