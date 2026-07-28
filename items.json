@@ -2124,10 +2124,10 @@
         "group": "COTTON SUIT",
         "name": "MASTI AFREEN",
         "print_name": "SUIT",
-        "sale_price": 500.0,
+        "sale_price": 530.0,
         "mrp": 1000.0,
-        "purchase_price": 450.0,
-        "stock": -2.0
+        "purchase_price": 480.0,
+        "stock": 158.0
     },
     {
         "alias": "001096",
@@ -4288,86 +4288,6 @@
         "mrp": 0.0,
         "purchase_price": 0.0,
         "stock": 0.0
-    },
-    {
-        "alias": "001109",
-        "group": "General",
-        "name": "MF NO.1",
-        "print_name": "Suit",
-        "sale_price": 590.0,
-        "mrp": 883.13,
-        "purchase_price": 471.0,
-        "stock": 8.0
-    },
-    {
-        "alias": "001110",
-        "group": "General",
-        "name": "MF NO.2",
-        "print_name": "Suit",
-        "sale_price": 600.0,
-        "mrp": 901.88,
-        "purchase_price": 481.0,
-        "stock": 8.0
-    },
-    {
-        "alias": "001111",
-        "group": "General",
-        "name": "MF NO.3",
-        "print_name": "Suit",
-        "sale_price": 560.0,
-        "mrp": 843.75,
-        "purchase_price": 450.0,
-        "stock": 4.0
-    },
-    {
-        "alias": "001112",
-        "group": "General",
-        "name": "MF NO.4",
-        "print_name": "Suit",
-        "sale_price": 610.0,
-        "mrp": 922.5,
-        "purchase_price": 492.0,
-        "stock": 8.0
-    },
-    {
-        "alias": "001113",
-        "group": "General",
-        "name": "MF NO.5",
-        "print_name": "Suit",
-        "sale_price": 570.0,
-        "mrp": 862.5,
-        "purchase_price": 460.0,
-        "stock": 4.0
-    },
-    {
-        "alias": "001114",
-        "group": "General",
-        "name": "MF NO.6",
-        "print_name": "Suit",
-        "sale_price": 550.0,
-        "mrp": 821.25,
-        "purchase_price": 438.0,
-        "stock": 4.0
-    },
-    {
-        "alias": "001115",
-        "group": "General",
-        "name": "MF NO.7",
-        "print_name": "Suit",
-        "sale_price": 590.0,
-        "mrp": 883.13,
-        "purchase_price": 471.0,
-        "stock": 4.0
-    },
-    {
-        "alias": "001116",
-        "group": "General",
-        "name": "MF NO.8",
-        "print_name": "Suit",
-        "sale_price": 610.0,
-        "mrp": 922.5,
-        "purchase_price": 492.0,
-        "stock": 4.0
     },
     {
         "alias": "000924",
@@ -12078,6 +11998,86 @@
         "mrp": 1000.0,
         "purchase_price": 455.0,
         "stock": 6.0
+    },
+    {
+        "alias": "001109",
+        "group": "SUIT",
+        "name": "MF NO.1",
+        "print_name": "Suit",
+        "sale_price": 590.0,
+        "mrp": 883.13,
+        "purchase_price": 471.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001110",
+        "group": "SUIT",
+        "name": "MF NO.2",
+        "print_name": "Suit",
+        "sale_price": 600.0,
+        "mrp": 901.88,
+        "purchase_price": 481.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001111",
+        "group": "SUIT",
+        "name": "MF NO.3",
+        "print_name": "Suit",
+        "sale_price": 560.0,
+        "mrp": 843.75,
+        "purchase_price": 450.0,
+        "stock": 4.0
+    },
+    {
+        "alias": "001112",
+        "group": "SUIT",
+        "name": "MF NO.4",
+        "print_name": "Suit",
+        "sale_price": 610.0,
+        "mrp": 922.5,
+        "purchase_price": 492.0,
+        "stock": 8.0
+    },
+    {
+        "alias": "001113",
+        "group": "SUIT",
+        "name": "MF NO.5",
+        "print_name": "Suit",
+        "sale_price": 570.0,
+        "mrp": 862.5,
+        "purchase_price": 460.0,
+        "stock": 4.0
+    },
+    {
+        "alias": "001114",
+        "group": "SUIT",
+        "name": "MF NO.6",
+        "print_name": "Suit",
+        "sale_price": 550.0,
+        "mrp": 821.25,
+        "purchase_price": 438.0,
+        "stock": 4.0
+    },
+    {
+        "alias": "001115",
+        "group": "SUIT",
+        "name": "MF NO.7",
+        "print_name": "Suit",
+        "sale_price": 590.0,
+        "mrp": 883.13,
+        "purchase_price": 471.0,
+        "stock": 4.0
+    },
+    {
+        "alias": "001116",
+        "group": "SUIT",
+        "name": "MF NO.8",
+        "print_name": "Suit",
+        "sale_price": 610.0,
+        "mrp": 922.5,
+        "purchase_price": 492.0,
+        "stock": 4.0
     },
     {
         "alias": "000503",
