@@ -2830,6 +2830,16 @@
         "stock": 0.0
     },
     {
+        "alias": "001123",
+        "group": "FARSI",
+        "name": "KC INDIE MASALA",
+        "print_name": "FARSI",
+        "sale_price": 1690.0,
+        "mrp": 3387.5,
+        "purchase_price": 1355.0,
+        "stock": 8.0
+    },
+    {
         "alias": "0000221",
         "group": "FARSI",
         "name": "KC PANJAB DI HEER",
@@ -2838,6 +2848,16 @@
         "mrp": 3392.0,
         "purchase_price": 2650.0,
         "stock": 0.0
+    },
+    {
+        "alias": "001125",
+        "group": "FARSI",
+        "name": "KC RAJWADI ROOT",
+        "print_name": "FARSI",
+        "sale_price": 1690.0,
+        "mrp": 3387.5,
+        "purchase_price": 1355.0,
+        "stock": 8.0
     },
     {
         "alias": "0000273",
@@ -7700,6 +7720,16 @@
         "stock": -1.0
     },
     {
+        "alias": "001124",
+        "group": "PLAZO",
+        "name": "KC OCEAN LUCK",
+        "print_name": "Plazo",
+        "sale_price": 1720.0,
+        "mrp": 3450.0,
+        "purchase_price": 1380.0,
+        "stock": 8.0
+    },
+    {
         "alias": "000642",
         "group": "PLAZO",
         "name": "KC OLDEST CAVES",
@@ -8138,6 +8168,16 @@
         "mrp": 3360.0,
         "purchase_price": 1400.0,
         "stock": -3.0
+    },
+    {
+        "alias": "001126",
+        "group": "PLAZO",
+        "name": "KC WAVE TIGER",
+        "print_name": "Plazo",
+        "sale_price": 1720.0,
+        "mrp": 3450.0,
+        "purchase_price": 1380.0,
+        "stock": 8.0
     },
     {
         "alias": "000571",
@@ -9516,8 +9556,8 @@
         "print_name": "SP",
         "sale_price": 2820.0,
         "mrp": 5625.0,
-        "purchase_price": 2250.0,
-        "stock": 0.0
+        "purchase_price": 2150.0,
+        "stock": 8.0
     },
     {
         "alias": "000058",
