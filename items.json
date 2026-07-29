@@ -2747,7 +2747,7 @@
         "sale_price": 230.0,
         "mrp": 456.0,
         "purchase_price": 190.0,
-        "stock": 17.0
+        "stock": 16.0
     },
     {
         "alias": "001054",
@@ -4537,7 +4537,7 @@
         "sale_price": 130.0,
         "mrp": 260.0,
         "purchase_price": 115.0,
-        "stock": 41.0
+        "stock": 40.0
     },
     {
         "alias": "001025",
@@ -4617,7 +4617,7 @@
         "sale_price": 550.0,
         "mrp": 821.25,
         "purchase_price": 438.0,
-        "stock": 8.0
+        "stock": 7.0
     },
     {
         "alias": "0000345",
@@ -12107,7 +12107,7 @@
         "sale_price": 600.0,
         "mrp": 901.88,
         "purchase_price": 481.0,
-        "stock": 8.0
+        "stock": 6.0
     },
     {
         "alias": "001111",
