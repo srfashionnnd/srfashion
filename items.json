@@ -10054,10 +10054,10 @@
         "group": "SUIT",
         "name": "Afreen MASTI",
         "print_name": "Afreen MASTI",
-        "sale_price": 550.0,
+        "sale_price": 530.0,
         "mrp": 1100.0,
-        "purchase_price": 0.0,
-        "stock": -5.0
+        "purchase_price": 480.0,
+        "stock": -6.0
     },
     {
         "alias": "000989",
