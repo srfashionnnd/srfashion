@@ -2564,7 +2564,7 @@
         "group": "DF",
         "name": "JNX 7 NO",
         "print_name": "DF",
-        "sale_price": 2230.0,
+        "sale_price": 1890.0,
         "mrp": 4462.5,
         "purchase_price": 1785.0,
         "stock": 0.0
@@ -2594,7 +2594,7 @@
         "group": "DF",
         "name": "JNX LEKHA 1 NO",
         "print_name": "DOLL FROCK",
-        "sale_price": 2530.0,
+        "sale_price": 2150.0,
         "mrp": 5053.13,
         "purchase_price": 2021.25,
         "stock": 0.0
@@ -3004,7 +3004,7 @@
         "group": "FROCK",
         "name": "KAHD 223",
         "print_name": "FROCK",
-        "sale_price": 2300.0,
+        "sale_price": 1950.0,
         "mrp": 4593.75,
         "purchase_price": 1837.5,
         "stock": 0.0
