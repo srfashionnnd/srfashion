@@ -7404,7 +7404,7 @@
         "group": "PLAZO",
         "name": "KC FLAVOUR BOX",
         "print_name": "PLAZO",
-        "sale_price": 1890.0,
+        "sale_price": 1740.0,
         "mrp": 2092.8,
         "purchase_price": 1635.0,
         "stock": 0.0
@@ -7604,7 +7604,7 @@
         "group": "PLAZO",
         "name": "KC JELLY JOY",
         "print_name": "PLAZO",
-        "sale_price": 1890.0,
+        "sale_price": 1740.0,
         "mrp": 2092.8,
         "purchase_price": 1635.0,
         "stock": 0.0
@@ -9204,7 +9204,7 @@
         "group": "RUSSIAN PLAZO",
         "name": "N LIZAT",
         "print_name": "RS PLAZO",
-        "sale_price": 1040.0,
+        "sale_price": 999.0,
         "mrp": 1152.0,
         "purchase_price": 900.0,
         "stock": -1.0
