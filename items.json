@@ -14312,9 +14312,9 @@
     {
         "alias": "000707",
         "group": "TROUSER",
-        "name": "KC SURPEISE MAGIC",
-        "print_name": "Trouser",
-        "sale_price": 1760.0,
+        "name": "KC SURPRISE MAGIC",
+        "print_name": "KC SURPRISE MAGIC",
+        "sale_price": 1600.0,
         "mrp": 3516.0,
         "purchase_price": 1465.0,
         "stock": 3.0
