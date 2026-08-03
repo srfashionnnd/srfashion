@@ -2394,7 +2394,7 @@
         "group": "DALL FROCK",
         "name": "KAHD 205 DF",
         "print_name": "DF",
-        "sale_price": 1770.0,
+        "sale_price": 1520.0,
         "mrp": 3543.75,
         "purchase_price": 1417.5,
         "stock": -1.0
@@ -2984,7 +2984,7 @@
         "group": "FROCK",
         "name": "KAHD 171",
         "print_name": "FROCK",
-        "sale_price": 1570.0,
+        "sale_price": 1360.0,
         "mrp": 3136.88,
         "purchase_price": 1254.75,
         "stock": 0.0
@@ -3404,7 +3404,7 @@
         "group": "FROCK",
         "name": "RG FROCK NO.1",
         "print_name": "FROCK",
-        "sale_price": 1870.0,
+        "sale_price": 1650.0,
         "mrp": 3741.0,
         "purchase_price": 1496.25,
         "stock": 0.0
@@ -5894,7 +5894,7 @@
         "group": "LACHA",
         "name": "KAHD 2295",
         "print_name": "Lacha",
-        "sale_price": 2880.0,
+        "sale_price": 2400.0,
         "mrp": 5761.88,
         "purchase_price": 2304.75,
         "stock": 0.0
@@ -6104,7 +6104,7 @@
         "group": "LACHA",
         "name": "RG LEHNGHA NO.5",
         "print_name": "LEHNGA",
-        "sale_price": 1970.0,
+        "sale_price": 1680.0,
         "mrp": 3925.0,
         "purchase_price": 1569.75,
         "stock": 0.0
