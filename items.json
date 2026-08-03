@@ -9314,7 +9314,7 @@
         "group": "RUSSIAN PLAZO",
         "name": "SNT SABNAM",
         "print_name": "RUSSIAN PLAZO",
-        "sale_price": 1350.0,
+        "sale_price": 1250.0,
         "mrp": 2700.0,
         "purchase_price": 1125.0,
         "stock": 1.0
@@ -9544,7 +9544,7 @@
         "group": "SHIRT PLAZO",
         "name": "KC GOOGLE GEMINI",
         "print_name": "SP",
-        "sale_price": 2060.0,
+        "sale_price": 1940.0,
         "mrp": 4117.0,
         "purchase_price": 1790.0,
         "stock": 0.0
