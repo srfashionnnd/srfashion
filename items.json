@@ -3204,7 +3204,7 @@
         "group": "FROCK",
         "name": "RAHD 412",
         "print_name": "FROCK",
-        "sale_price": 3190.0,
+        "sale_price": 2750.0,
         "mrp": 6366.0,
         "purchase_price": 2546.25,
         "stock": 0.0
@@ -4614,7 +4614,7 @@
         "group": "GOWN",
         "name": "AF GOWN NO. 18",
         "print_name": "GOWN",
-        "sale_price": 4350.0,
+        "sale_price": 3690.0,
         "mrp": 8700.0,
         "purchase_price": 2900.0,
         "stock": 0.0
@@ -5874,7 +5874,7 @@
         "group": "LACHA",
         "name": "JNX 827, 11 NO",
         "print_name": "LACHA",
-        "sale_price": 1570.0,
+        "sale_price": 1400.0,
         "mrp": 3136.88,
         "purchase_price": 1254.75,
         "stock": -1.0
