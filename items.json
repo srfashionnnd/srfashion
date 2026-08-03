@@ -3284,7 +3284,7 @@
         "group": "FROCK",
         "name": "RG 03 FROCK",
         "print_name": "FROCK",
-        "sale_price": 1510.0,
+        "sale_price": 1350.0,
         "mrp": 3018.7,
         "purchase_price": 1207.5,
         "stock": 0.0
@@ -3324,7 +3324,7 @@
         "group": "FROCK",
         "name": "RG FROCK 09",
         "print_name": "FROCK",
-        "sale_price": 1780.0,
+        "sale_price": 1530.0,
         "mrp": 3543.7,
         "purchase_price": 1417.5,
         "stock": -2.0
@@ -3434,7 +3434,7 @@
         "group": "FROCK",
         "name": "RG FROCK NO.7",
         "print_name": "FROCK",
-        "sale_price": 1480.0,
+        "sale_price": 1300.0,
         "mrp": 2954.0,
         "purchase_price": 1181.25,
         "stock": -1.0
