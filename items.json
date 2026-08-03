@@ -8204,7 +8204,7 @@
         "group": "PLAZO",
         "name": "KC ZILL E NOOR",
         "print_name": "PLAZO",
-        "sale_price": 1870.0,
+        "sale_price": 1600.0,
         "mrp": 3737.5,
         "purchase_price": 1495.0,
         "stock": 0.0
@@ -9274,7 +9274,7 @@
         "group": "RUSSIAN PLAZO",
         "name": "Russian Plazo Mix",
         "print_name": "Plazo",
-        "sale_price": 2040.0,
+        "sale_price": 1750.0,
         "mrp": 4087.5,
         "purchase_price": 1635.0,
         "stock": -4.0
