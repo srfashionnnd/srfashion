@@ -4734,7 +4734,7 @@
         "group": "GOWN",
         "name": "GF GOWN SHADES",
         "print_name": "GOWN",
-        "sale_price": 2240.0,
+        "sale_price": 1950.0,
         "mrp": 4475.0,
         "purchase_price": 1790.0,
         "stock": 0.0
@@ -6054,7 +6054,7 @@
         "group": "LACHA",
         "name": "RG LACHA 06",
         "print_name": "LACHA",
-        "sale_price": 2230.0,
+        "sale_price": 1900.0,
         "mrp": 4449.3,
         "purchase_price": 1779.75,
         "stock": 0.0
