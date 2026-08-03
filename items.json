@@ -3884,7 +3884,7 @@
         "group": "General",
         "name": "KAHD 491-09",
         "print_name": "KAHD 491-09",
-        "sale_price": 1570.0,
+        "sale_price": 1380.0,
         "mrp": 3137.5,
         "purchase_price": 1255.0,
         "stock": 0.0
@@ -7644,7 +7644,7 @@
         "group": "PLAZO",
         "name": "KC MEHRZARA",
         "print_name": "PLAZO",
-        "sale_price": 1870.0,
+        "sale_price": 1600.0,
         "mrp": 3737.5,
         "purchase_price": 1495.0,
         "stock": 0.0
