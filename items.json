@@ -4024,7 +4024,7 @@
         "group": "General",
         "name": "KAHD 491-21",
         "print_name": "KAHD 491-21",
-        "sale_price": 1570.0,
+        "sale_price": 1390.0,
         "mrp": 3137.5,
         "purchase_price": 1255.0,
         "stock": 3.0
@@ -8294,7 +8294,7 @@
         "group": "PLAZO",
         "name": "N HIGHWAY",
         "print_name": "PLAZO",
-        "sale_price": 1400.0,
+        "sale_price": 1310.0,
         "mrp": 1548.8,
         "purchase_price": 1210.0,
         "stock": -1.0
