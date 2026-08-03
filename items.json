@@ -6444,7 +6444,7 @@
         "group": "PLAZO",
         "name": "1 EID SPECIAL",
         "print_name": "PLAZO",
-        "sale_price": 1790.0,
+        "sale_price": 1550.0,
         "mrp": 3575.0,
         "purchase_price": 1430.0,
         "stock": -3.0
@@ -6504,7 +6504,7 @@
         "group": "PLAZO",
         "name": "10 MOH MAYA",
         "print_name": "PLAZO",
-        "sale_price": 1790.0,
+        "sale_price": 1550.0,
         "mrp": 3575.0,
         "purchase_price": 1430.0,
         "stock": 0.0
@@ -9124,7 +9124,7 @@
         "group": "RUSSIAN PLAZO",
         "name": "GF RUSIDA PLAZO",
         "print_name": "Russian Plazo",
-        "sale_price": 2040.0,
+        "sale_price": 1740.0,
         "mrp": 4087.5,
         "purchase_price": 1635.0,
         "stock": -1.0
