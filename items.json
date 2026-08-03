@@ -3564,7 +3564,7 @@
         "group": "GARARA",
         "name": "RG 06 GARARA",
         "print_name": "GARARA",
-        "sale_price": 2070.0,
+        "sale_price": 1800.0,
         "mrp": 4134.3,
         "purchase_price": 1653.7,
         "stock": 0.0
@@ -6814,7 +6814,7 @@
         "group": "PLAZO",
         "name": "7 AVNEN 253",
         "print_name": "Plazo",
-        "sale_price": 1570.0,
+        "sale_price": 1350.0,
         "mrp": 3137.5,
         "purchase_price": 1255.0,
         "stock": 0.0
