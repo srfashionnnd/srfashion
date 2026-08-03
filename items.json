@@ -7150,16 +7150,6 @@
         "stock": -7.0
     },
     {
-        "alias": "0000296",
-        "group": "PLAZO",
-        "name": "ISHQ STEPS",
-        "print_name": "P",
-        "sale_price": 1600.0,
-        "mrp": 3197.0,
-        "purchase_price": 1390.0,
-        "stock": 0.0
-    },
-    {
         "alias": "000149",
         "group": "PLAZO",
         "name": "Jimmy Chu 1178",
@@ -7587,6 +7577,16 @@
         "sale_price": 2390.0,
         "mrp": 4788.0,
         "purchase_price": 1995.0,
+        "stock": 0.0
+    },
+    {
+        "alias": "0000296",
+        "group": "PLAZO",
+        "name": "KC ISHQ STEPS",
+        "print_name": "Plazo",
+        "sale_price": 1490.0,
+        "mrp": 3197.0,
+        "purchase_price": 1390.0,
         "stock": 0.0
     },
     {
@@ -14614,7 +14614,7 @@
         "group": "TROUSER",
         "name": "SHREE EVA",
         "print_name": "TROUSER",
-        "sale_price": 1150.0,
+        "sale_price": 1050.0,
         "mrp": 2300.0,
         "purchase_price": 920.0,
         "stock": -4.0
