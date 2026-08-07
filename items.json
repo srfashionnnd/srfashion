@@ -4610,16 +4610,6 @@
         "stock": -6.0
     },
     {
-        "alias": "001117",
-        "group": "General",
-        "name": "VLC LOCHA",
-        "print_name": "Suit",
-        "sale_price": 550.0,
-        "mrp": 821.25,
-        "purchase_price": 438.0,
-        "stock": 15.0
-    },
-    {
         "alias": "0000345",
         "group": "GOWN",
         "name": "AF GOWN NO. 18",
@@ -13528,6 +13518,16 @@
         "mrp": 736.0,
         "purchase_price": 320.0,
         "stock": 0.0
+    },
+    {
+        "alias": "001117",
+        "group": "SUIT",
+        "name": "VLC LOCHA",
+        "print_name": "Suit",
+        "sale_price": 550.0,
+        "mrp": 821.25,
+        "purchase_price": 438.0,
+        "stock": 15.0
     },
     {
         "alias": "001104",
