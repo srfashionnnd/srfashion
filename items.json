@@ -2160,14 +2160,14 @@
         "stock": 5.0
     },
     {
-        "alias": "",
+        "alias": "001131",
         "group": "COTTON SUIT",
         "name": "MASTI PREM LEELA",
         "print_name": "Cotton Suit",
         "sale_price": 400.0,
         "mrp": 875.0,
         "purchase_price": 350.0,
-        "stock": 0.0
+        "stock": 24.0
     },
     {
         "alias": "001097",
@@ -4617,7 +4617,7 @@
         "sale_price": 550.0,
         "mrp": 821.25,
         "purchase_price": 438.0,
-        "stock": 7.0
+        "stock": 15.0
     },
     {
         "alias": "0000345",
@@ -10070,24 +10070,24 @@
         "stock": -6.0
     },
     {
-        "alias": "",
+        "alias": "001127",
         "group": "SUIT",
         "name": "AHD DIL",
         "print_name": "Suit",
         "sale_price": 590.0,
         "mrp": 1205.0,
         "purchase_price": 482.0,
-        "stock": 0.0
+        "stock": 16.0
     },
     {
-        "alias": "",
+        "alias": "001128",
         "group": "SUIT",
         "name": "AHD GULAB",
         "print_name": "Suit",
         "sale_price": 570.0,
         "mrp": 1150.0,
         "purchase_price": 460.0,
-        "stock": 0.0
+        "stock": 8.0
     },
     {
         "alias": "000989",
@@ -10550,14 +10550,14 @@
         "stock": -4.0
     },
     {
-        "alias": "",
+        "alias": "001129",
         "group": "SUIT",
         "name": "HEART BEAT",
         "print_name": "Suit",
         "sale_price": 440.0,
         "mrp": 875.0,
         "purchase_price": 350.0,
-        "stock": 0.0
+        "stock": 12.0
     },
     {
         "alias": "0000199",
@@ -12020,14 +12020,14 @@
         "stock": 0.0
     },
     {
-        "alias": "",
+        "alias": "001130",
         "group": "SUIT",
         "name": "KKC SEHNAZ NX",
         "print_name": "Suit",
         "sale_price": 300.0,
         "mrp": 602.5,
         "purchase_price": 241.0,
-        "stock": 0.0
+        "stock": 16.0
     },
     {
         "alias": "0000246",
@@ -12790,14 +12790,14 @@
         "stock": 8.0
     },
     {
-        "alias": "",
+        "alias": "001132",
         "group": "SUIT",
         "name": "OM SAI DIL",
         "print_name": "Suit",
         "sale_price": 530.0,
         "mrp": 1062.5,
         "purchase_price": 425.0,
-        "stock": 0.0
+        "stock": 8.0
     },
     {
         "alias": "001103",
@@ -12920,24 +12920,24 @@
         "stock": -4.0
     },
     {
-        "alias": "",
+        "alias": "001133",
         "group": "SUIT",
         "name": "PC DIL DEEWANA",
         "print_name": "Suit",
         "sale_price": 550.0,
         "mrp": 1100.0,
         "purchase_price": 440.0,
-        "stock": 0.0
+        "stock": 8.0
     },
     {
-        "alias": "",
+        "alias": "001134",
         "group": "SUIT",
         "name": "PC DIL SE",
         "print_name": "Suit",
         "sale_price": 550.0,
         "mrp": 1100.0,
         "purchase_price": 440.0,
-        "stock": 0.0
+        "stock": 8.0
     },
     {
         "alias": "000849",
@@ -12960,14 +12960,14 @@
         "stock": 4.0
     },
     {
-        "alias": "",
+        "alias": "001135",
         "group": "SUIT",
         "name": "PC LAADLI",
         "print_name": "Suit",
         "sale_price": 440.0,
         "mrp": 887.5,
         "purchase_price": 355.0,
-        "stock": 0.0
+        "stock": 8.0
     },
     {
         "alias": "001029",
