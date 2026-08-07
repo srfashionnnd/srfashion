@@ -12680,6 +12680,16 @@
         "stock": 0.0
     },
     {
+        "alias": "001133",
+        "group": "SUIT",
+        "name": "OM DIL DEEWANA",
+        "print_name": "Suit",
+        "sale_price": 550.0,
+        "mrp": 1100.0,
+        "purchase_price": 440.0,
+        "stock": 8.0
+    },
+    {
         "alias": "000286",
         "group": "SUIT",
         "name": "Om Dolphine",
@@ -12908,16 +12918,6 @@
         "mrp": 1425.0,
         "purchase_price": 570.0,
         "stock": -4.0
-    },
-    {
-        "alias": "001133",
-        "group": "SUIT",
-        "name": "PC DIL DEEWANA",
-        "print_name": "Suit",
-        "sale_price": 550.0,
-        "mrp": 1100.0,
-        "purchase_price": 440.0,
-        "stock": 8.0
     },
     {
         "alias": "001134",
