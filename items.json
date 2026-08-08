@@ -3217,7 +3217,7 @@
         "sale_price": 2750.0,
         "mrp": 6366.0,
         "purchase_price": 2546.25,
-        "stock": 0.0
+        "stock": -1.0
     },
     {
         "alias": "000384",
@@ -3277,7 +3277,7 @@
         "sale_price": 1680.0,
         "mrp": 3925.0,
         "purchase_price": 1569.7,
-        "stock": -1.0
+        "stock": -2.0
     },
     {
         "alias": "000392",
@@ -5257,7 +5257,7 @@
         "sale_price": 350.0,
         "mrp": 700.0,
         "purchase_price": 280.0,
-        "stock": 5.0
+        "stock": 4.0
     },
     {
         "alias": "000947",
@@ -5327,7 +5327,7 @@
         "sale_price": 340.0,
         "mrp": 672.5,
         "purchase_price": 269.0,
-        "stock": 9.0
+        "stock": 8.0
     },
     {
         "alias": "000954",
@@ -8837,7 +8837,7 @@
         "sale_price": 2090.0,
         "mrp": 4180.0,
         "purchase_price": 1667.0,
-        "stock": -1.0
+        "stock": -2.0
     },
     {
         "alias": "000999",
@@ -12517,7 +12517,7 @@
         "sale_price": 910.0,
         "mrp": 1812.5,
         "purchase_price": 725.0,
-        "stock": 3.0
+        "stock": 2.0
     },
     {
         "alias": "000830",
@@ -13077,7 +13077,7 @@
         "sale_price": 1410.0,
         "mrp": 2825.0,
         "purchase_price": 1130.0,
-        "stock": 0.0
+        "stock": -1.0
     },
     {
         "alias": "000077",
@@ -14257,7 +14257,7 @@
         "sale_price": 1610.0,
         "mrp": 3228.0,
         "purchase_price": 1345.0,
-        "stock": 8.0
+        "stock": 7.0
     },
     {
         "alias": "000530",
